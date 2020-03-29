@@ -1,5 +1,5 @@
 import mock from "./../mock";
-import _ from "../../app/main/pages/landing/auth/forgot-password/node_modules/@lodash";
+import _ from "@lodash";
 import { amber, blue, blueGrey, green } from "@material-ui/core/colors";
 
 const demoSteps = [

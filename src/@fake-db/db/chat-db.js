@@ -1,6 +1,6 @@
 import mock from "./../mock";
 import { FuseUtils } from "@fuse";
-import _ from "../../app/main/pages/landing/auth/forgot-password/node_modules/@lodash";
+import _ from "@lodash";
 
 const chatDb = {
   contacts: [
