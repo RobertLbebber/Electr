@@ -1,0 +1,463 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": ["mails", "folders", "filters", "labels"],
+  "properties": {
+    "mails": {
+      "$id": "#/properties/mails",
+      "type": "array",
+      "title": "The Mails Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/mails/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "required": [
+          "id",
+          "from",
+          "to",
+          "subject",
+          "message",
+          "time",
+          "read",
+          "starred",
+          "important",
+          "hasAttachments",
+          "attachments",
+          "labels",
+          "folder"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/mails/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["15459251a6d6b397565"]
+          },
+          "from": {
+            "$id": "#/properties/mails/items/properties/from",
+            "type": "object",
+            "title": "The From Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "email": "alicefreeman@creapond.com",
+                "avatar": "assets/images/avatars/alice.jpg",
+                "name": "Alice Freeman"
+              }
+            ],
+            "required": ["name", "avatar", "email"],
+            "properties": {
+              "name": {
+                "$id": "#/properties/mails/items/properties/from/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Alice Freeman"]
+              },
+              "avatar": {
+                "$id": "#/properties/mails/items/properties/from/properties/avatar",
+                "type": "string",
+                "title": "The Avatar Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["assets/images/avatars/alice.jpg"]
+              },
+              "email": {
+                "$id": "#/properties/mails/items/properties/from/properties/email",
+                "type": "string",
+                "title": "The Email Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["alicefreeman@creapond.com"]
+              }
+            }
+          },
+          "to": {
+            "$id": "#/properties/mails/items/properties/to",
+            "type": "array",
+            "title": "The To Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/mails/items/properties/to/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "email": "johndoe@creapond.com",
+                  "name": "me"
+                }
+              ],
+              "required": ["name", "email"],
+              "properties": {
+                "name": {
+                  "$id": "#/properties/mails/items/properties/to/items/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["me"]
+                },
+                "email": {
+                  "$id": "#/properties/mails/items/properties/to/items/properties/email",
+                  "type": "string",
+                  "title": "The Email Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["johndoe@creapond.com"]
+                }
+              }
+            }
+          },
+          "subject": {
+            "$id": "#/properties/mails/items/properties/subject",
+            "type": "string",
+            "title": "The Subject Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            ]
+          },
+          "message": {
+            "$id": "#/properties/mails/items/properties/message",
+            "type": "string",
+            "title": "The Message Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lorem diam, pulvinar id nisl non, ultrices maximus nibh. Suspendisse ut justo velit. Nullam ac ultrices risus, quis auctor orci. Vestibulum volutpat nisi et neque porta ullamcorper. Maecenas porttitor porta erat ac suscipit. Sed cursus leo ut elementum fringilla. Maecenas semper viverra erat, vel ullamcorper dui efficitur in. Vestibulum placerat imperdiet tellus, et tincidunt eros posuere eget. Proin sit amet facilisis libero. Nulla eget est ut erat aliquet rhoncus. Quisque ac urna vitae dui hendrerit sollicitudin vel id sem. </p><p> In eget ante sapien. Quisque consequat velit non ante finibus, vel placerat erat ultricies. Aliquam bibendum justo erat, ultrices vehicula dolor elementum a. Mauris eu nisl feugiat ligula molestie eleifend. Aliquam efficitur venenatis velit ac porta. Vivamus vitae pulvinar tellus. Donec odio enim, auctor eget nibh mattis, ultricies dignissim lacus. Phasellus non tincidunt dui. Nulla eu arcu lorem. </p><p> Donec non hendrerit augue, lobortis sollicitudin odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis sit amet euismod enim, eget vestibulum justo. Fusce a placerat lectus, eget feugiat purus. Cras risus ante, faucibus eget justo commodo, volutpat tempor ante. Donec sit amet leo venenatis, gravida quam sit amet, blandit dui. In quam ante, elementum ut faucibus nec, tristique vitae dui. Praesent vel erat at enim placerat luctus vel ut ipsum. In congue tempor mi, non ornare lectus condimentum at. Aenean libero diam, finibus eget sapien et, tristique fermentum lorem. </p>"
+            ]
+          },
+          "time": {
+            "$id": "#/properties/mails/items/properties/time",
+            "type": "string",
+            "title": "The Time Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["28 Jun"]
+          },
+          "read": {
+            "$id": "#/properties/mails/items/properties/read",
+            "type": "boolean",
+            "title": "The Read Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [false]
+          },
+          "starred": {
+            "$id": "#/properties/mails/items/properties/starred",
+            "type": "boolean",
+            "title": "The Starred Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [false]
+          },
+          "important": {
+            "$id": "#/properties/mails/items/properties/important",
+            "type": "boolean",
+            "title": "The Important Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [true]
+          },
+          "hasAttachments": {
+            "$id": "#/properties/mails/items/properties/hasAttachments",
+            "type": "boolean",
+            "title": "The Hasattachments Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [true]
+          },
+          "attachments": {
+            "$id": "#/properties/mails/items/properties/attachments",
+            "type": "array",
+            "title": "The Attachments Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/mails/items/properties/attachments/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "type": "image",
+                  "url": "",
+                  "fileName": "flowers",
+                  "preview": "assets/images/mail/attachment-1.jpg",
+                  "size": "1.1Mb"
+                },
+                {
+                  "fileName": "snow",
+                  "preview": "assets/images/mail/attachment-2.jpg",
+                  "size": "380kb",
+                  "type": "image",
+                  "url": ""
+                },
+                {
+                  "type": "image",
+                  "url": "",
+                  "fileName": "sunrise",
+                  "preview": "assets/images/mail/attachment-3.jpg",
+                  "size": "17Mb"
+                }
+              ],
+              "required": ["type", "fileName", "preview", "url", "size"],
+              "properties": {
+                "type": {
+                  "$id": "#/properties/mails/items/properties/attachments/items/properties/type",
+                  "type": "string",
+                  "title": "The Type Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["image"]
+                },
+                "fileName": {
+                  "$id": "#/properties/mails/items/properties/attachments/items/properties/fileName",
+                  "type": "string",
+                  "title": "The Filename Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["flowers"]
+                },
+                "preview": {
+                  "$id": "#/properties/mails/items/properties/attachments/items/properties/preview",
+                  "type": "string",
+                  "title": "The Preview Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["assets/images/mail/attachment-1.jpg"]
+                },
+                "url": {
+                  "$id": "#/properties/mails/items/properties/attachments/items/properties/url",
+                  "type": "string",
+                  "title": "The Url Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [""]
+                },
+                "size": {
+                  "$id": "#/properties/mails/items/properties/attachments/items/properties/size",
+                  "type": "string",
+                  "title": "The Size Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["1.1Mb"]
+                }
+              }
+            }
+          },
+          "labels": {
+            "$id": "#/properties/mails/items/properties/labels",
+            "type": "array",
+            "title": "The Labels Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/mails/items/properties/labels/items",
+              "type": "integer",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [1]
+            }
+          },
+          "folder": {
+            "$id": "#/properties/mails/items/properties/folder",
+            "type": "integer",
+            "title": "The Folder Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [0]
+          }
+        }
+      }
+    },
+    "folders": {
+      "$id": "#/properties/folders",
+      "type": "array",
+      "title": "The Folders Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/folders/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "handle": "inbox",
+            "title": "Inbox",
+            "id": 0.0,
+            "icon": "inbox"
+          }
+        ],
+        "required": ["id", "handle", "title", "icon"],
+        "properties": {
+          "id": {
+            "$id": "#/properties/folders/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [0]
+          },
+          "handle": {
+            "$id": "#/properties/folders/items/properties/handle",
+            "type": "string",
+            "title": "The Handle Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["inbox"]
+          },
+          "title": {
+            "$id": "#/properties/folders/items/properties/title",
+            "type": "string",
+            "title": "The Title Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Inbox"]
+          },
+          "icon": {
+            "$id": "#/properties/folders/items/properties/icon",
+            "type": "string",
+            "title": "The Icon Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["inbox"]
+          }
+        }
+      }
+    },
+    "filters": {
+      "$id": "#/properties/filters",
+      "type": "array",
+      "title": "The Filters Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/filters/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "title": "Starred",
+            "id": 0.0,
+            "icon": "star",
+            "handle": "starred"
+          }
+        ],
+        "required": ["id", "handle", "title", "icon"],
+        "properties": {
+          "id": {
+            "$id": "#/properties/filters/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [0]
+          },
+          "handle": {
+            "$id": "#/properties/filters/items/properties/handle",
+            "type": "string",
+            "title": "The Handle Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["starred"]
+          },
+          "title": {
+            "$id": "#/properties/filters/items/properties/title",
+            "type": "string",
+            "title": "The Title Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Starred"]
+          },
+          "icon": {
+            "$id": "#/properties/filters/items/properties/icon",
+            "type": "string",
+            "title": "The Icon Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["star"]
+          }
+        }
+      }
+    },
+    "labels": {
+      "$id": "#/properties/labels",
+      "type": "array",
+      "title": "The Labels Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/labels/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "id": 0.0,
+            "handle": "note",
+            "title": "Note",
+            "color": "#7cb342"
+          }
+        ],
+        "required": ["id", "handle", "title", "color"],
+        "properties": {
+          "id": {
+            "$id": "#/properties/labels/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [0]
+          },
+          "handle": {
+            "$id": "#/properties/labels/items/properties/handle",
+            "type": "string",
+            "title": "The Handle Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["note"]
+          },
+          "title": {
+            "$id": "#/properties/labels/items/properties/title",
+            "type": "string",
+            "title": "The Title Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Note"]
+          },
+          "color": {
+            "$id": "#/properties/labels/items/properties/color",
+            "type": "string",
+            "title": "The Color Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["#7cb342"]
+          }
+        }
+      }
+    }
+  }
+}

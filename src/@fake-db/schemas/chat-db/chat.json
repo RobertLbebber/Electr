@@ -1,0 +1,318 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": ["contacts", "chats", "user"],
+  "properties": {
+    "contacts": {
+      "$id": "#/properties/contacts",
+      "type": "array",
+      "title": "The Contacts Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/contacts/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "mood": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+            "status": "away",
+            "id": "5725a680fb65c91a82cb35e2",
+            "avatar": "assets/images/avatars/Trevino.jpg",
+            "name": "Trevino"
+          },
+          {
+            "id": "5725a68018c663044be49cbf",
+            "avatar": "assets/images/avatars/Tyson.jpg",
+            "name": "Tyson",
+            "mood": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+            "status": "do-not-disturb"
+          },
+          {
+            "name": "Velazquez",
+            "mood": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+            "status": "online",
+            "id": "5725a6809413bf8a0a5272b1",
+            "avatar": "assets/images/avatars/Velazquez.jpg"
+          }
+        ],
+        "required": ["id", "name", "avatar", "status", "mood"],
+        "properties": {
+          "id": {
+            "$id": "#/properties/contacts/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["5725a680fb65c91a82cb35e2"]
+          },
+          "name": {
+            "$id": "#/properties/contacts/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Trevino"]
+          },
+          "avatar": {
+            "$id": "#/properties/contacts/items/properties/avatar",
+            "type": "string",
+            "title": "The Avatar Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["assets/images/avatars/Trevino.jpg"]
+          },
+          "status": {
+            "$id": "#/properties/contacts/items/properties/status",
+            "type": "string",
+            "title": "The Status Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["away"]
+          },
+          "mood": {
+            "$id": "#/properties/contacts/items/properties/mood",
+            "type": "string",
+            "title": "The Mood Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+            ]
+          }
+        }
+      }
+    },
+    "chats": {
+      "$id": "#/properties/chats",
+      "type": "array",
+      "title": "The Chats Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/chats/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "dialog": [
+              {
+                "message": "You are the worst!",
+                "time": "2017-03-22T10:00:28.299Z",
+                "who": "5725a680b3249760ea21de52"
+              }
+            ],
+            "id": "1725a680b3249760ea21de52"
+          },
+          {
+            "dialog": [
+              {
+                "message": "Quickly come to the meeting room 1B, we have a big server issue",
+                "time": "2017-04-22T01:00:00.299Z",
+                "who": "5725a680606588342058356d"
+              }
+            ],
+            "id": "2725a680b8d240c011dd2243"
+          },
+          {
+            "id": "3725a6809413bf8a0a5272b4",
+            "dialog": [
+              {
+                "who": "5725a68009e20d0a9e9acf2a",
+                "message": "Quickly come to the meeting room 1B, we have a big server issue",
+                "time": "2017-04-22T02:10:00.299Z"
+              }
+            ]
+          }
+        ],
+        "required": ["id", "dialog"],
+        "properties": {
+          "id": {
+            "$id": "#/properties/chats/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["1725a680b3249760ea21de52"]
+          },
+          "dialog": {
+            "$id": "#/properties/chats/items/properties/dialog",
+            "type": "array",
+            "title": "The Dialog Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/chats/items/properties/dialog/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "who": "5725a680b3249760ea21de52",
+                  "message": "You are the worst!",
+                  "time": "2017-03-22T10:00:28.299Z"
+                }
+              ],
+              "required": ["who", "message", "time"],
+              "properties": {
+                "who": {
+                  "$id": "#/properties/chats/items/properties/dialog/items/properties/who",
+                  "type": "string",
+                  "title": "The Who Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["5725a680b3249760ea21de52"]
+                },
+                "message": {
+                  "$id": "#/properties/chats/items/properties/dialog/items/properties/message",
+                  "type": "string",
+                  "title": "The Message Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["You are the worst!"]
+                },
+                "time": {
+                  "$id": "#/properties/chats/items/properties/dialog/items/properties/time",
+                  "type": "string",
+                  "title": "The Time Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["2017-03-22T10:00:28.299Z"]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "user": {
+      "$id": "#/properties/user",
+      "type": "array",
+      "title": "The User Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/user/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "name": "John Doe",
+            "chatList": [
+              {
+                "contactId": "5725a68009e20d0a9e9acf2a",
+                "chatId": "3725a6809413bf8a0a5272b4",
+                "lastMessageTime": "2017-03-18T12:30:18.931Z"
+              }
+            ],
+            "mood": "it's a status....not your diary...",
+            "status": "online",
+            "id": "5725a6802d10e277a0f35724",
+            "avatar": "assets/images/avatars/profile.jpg"
+          }
+        ],
+        "required": ["id", "name", "avatar", "status", "mood", "chatList"],
+        "properties": {
+          "id": {
+            "$id": "#/properties/user/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["5725a6802d10e277a0f35724"]
+          },
+          "name": {
+            "$id": "#/properties/user/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["John Doe"]
+          },
+          "avatar": {
+            "$id": "#/properties/user/items/properties/avatar",
+            "type": "string",
+            "title": "The Avatar Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["assets/images/avatars/profile.jpg"]
+          },
+          "status": {
+            "$id": "#/properties/user/items/properties/status",
+            "type": "string",
+            "title": "The Status Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["online"]
+          },
+          "mood": {
+            "$id": "#/properties/user/items/properties/mood",
+            "type": "string",
+            "title": "The Mood Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["it's a status....not your diary..."]
+          },
+          "chatList": {
+            "$id": "#/properties/user/items/properties/chatList",
+            "type": "array",
+            "title": "The Chatlist Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/user/items/properties/chatList/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "lastMessageTime": "2017-03-18T12:30:18.931Z",
+                  "contactId": "5725a68009e20d0a9e9acf2a",
+                  "chatId": "3725a6809413bf8a0a5272b4"
+                }
+              ],
+              "required": ["chatId", "contactId", "lastMessageTime"],
+              "properties": {
+                "chatId": {
+                  "$id": "#/properties/user/items/properties/chatList/items/properties/chatId",
+                  "type": "string",
+                  "title": "The Chatid Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["3725a6809413bf8a0a5272b4"]
+                },
+                "contactId": {
+                  "$id": "#/properties/user/items/properties/chatList/items/properties/contactId",
+                  "type": "string",
+                  "title": "The Contactid Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["5725a68009e20d0a9e9acf2a"]
+                },
+                "lastMessageTime": {
+                  "$id": "#/properties/user/items/properties/chatList/items/properties/lastMessageTime",
+                  "type": "string",
+                  "title": "The Lastmessagetime Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["2017-03-18T12:30:18.931Z"]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

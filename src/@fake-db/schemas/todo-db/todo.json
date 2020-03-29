@@ -1,0 +1,312 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": ["todos", "folders", "filters", "labels"],
+  "properties": {
+    "todos": {
+      "$id": "#/properties/todos",
+      "type": "array",
+      "title": "The Todos Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/todos/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "important": false,
+            "dueDate": "2018-09-05T04:00:00.000Z",
+            "starred": false,
+            "completed": false,
+            "deleted": false,
+            "title": "Proident tempor est nulla irure ad est",
+            "notes": "Id nulla nulla proident deserunt deserunt proident in quis. Cillum reprehenderit labore id anim laborum.",
+            "id": "561551bd7fe2ff461101c192",
+            "labels": [1.0],
+            "startDate": "2018-09-03T04:00:00.000Z"
+          }
+        ],
+        "required": [
+          "id",
+          "title",
+          "notes",
+          "startDate",
+          "dueDate",
+          "completed",
+          "starred",
+          "important",
+          "deleted",
+          "labels"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/todos/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["561551bd7fe2ff461101c192"]
+          },
+          "title": {
+            "$id": "#/properties/todos/items/properties/title",
+            "type": "string",
+            "title": "The Title Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Proident tempor est nulla irure ad est"]
+          },
+          "notes": {
+            "$id": "#/properties/todos/items/properties/notes",
+            "type": "string",
+            "title": "The Notes Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Id nulla nulla proident deserunt deserunt proident in quis. Cillum reprehenderit labore id anim laborum."
+            ]
+          },
+          "startDate": {
+            "$id": "#/properties/todos/items/properties/startDate",
+            "type": "string",
+            "title": "The Startdate Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["2018-09-03T04:00:00.000Z"]
+          },
+          "dueDate": {
+            "$id": "#/properties/todos/items/properties/dueDate",
+            "type": "string",
+            "title": "The Duedate Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["2018-09-05T04:00:00.000Z"]
+          },
+          "completed": {
+            "$id": "#/properties/todos/items/properties/completed",
+            "type": "boolean",
+            "title": "The Completed Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [false]
+          },
+          "starred": {
+            "$id": "#/properties/todos/items/properties/starred",
+            "type": "boolean",
+            "title": "The Starred Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [false]
+          },
+          "important": {
+            "$id": "#/properties/todos/items/properties/important",
+            "type": "boolean",
+            "title": "The Important Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [false]
+          },
+          "deleted": {
+            "$id": "#/properties/todos/items/properties/deleted",
+            "type": "boolean",
+            "title": "The Deleted Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [false]
+          },
+          "labels": {
+            "$id": "#/properties/todos/items/properties/labels",
+            "type": "array",
+            "title": "The Labels Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/todos/items/properties/labels/items",
+              "type": "integer",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [1]
+            }
+          }
+        }
+      }
+    },
+    "folders": {
+      "$id": "#/properties/folders",
+      "type": "array",
+      "title": "The Folders Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/folders/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "title": "All",
+            "id": 0.0,
+            "icon": "view_headline",
+            "handle": "all"
+          }
+        ],
+        "required": ["id", "handle", "title", "icon"],
+        "properties": {
+          "id": {
+            "$id": "#/properties/folders/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [0]
+          },
+          "handle": {
+            "$id": "#/properties/folders/items/properties/handle",
+            "type": "string",
+            "title": "The Handle Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["all"]
+          },
+          "title": {
+            "$id": "#/properties/folders/items/properties/title",
+            "type": "string",
+            "title": "The Title Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["All"]
+          },
+          "icon": {
+            "$id": "#/properties/folders/items/properties/icon",
+            "type": "string",
+            "title": "The Icon Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["view_headline"]
+          }
+        }
+      }
+    },
+    "filters": {
+      "$id": "#/properties/filters",
+      "type": "array",
+      "title": "The Filters Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/filters/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "id": 0.0,
+            "icon": "star",
+            "handle": "starred",
+            "title": "Starred"
+          }
+        ],
+        "required": ["id", "handle", "title", "icon"],
+        "properties": {
+          "id": {
+            "$id": "#/properties/filters/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [0]
+          },
+          "handle": {
+            "$id": "#/properties/filters/items/properties/handle",
+            "type": "string",
+            "title": "The Handle Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["starred"]
+          },
+          "title": {
+            "$id": "#/properties/filters/items/properties/title",
+            "type": "string",
+            "title": "The Title Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Starred"]
+          },
+          "icon": {
+            "$id": "#/properties/filters/items/properties/icon",
+            "type": "string",
+            "title": "The Icon Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["star"]
+          }
+        }
+      }
+    },
+    "labels": {
+      "$id": "#/properties/labels",
+      "type": "array",
+      "title": "The Labels Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/labels/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "title": "Frontend",
+            "color": "#388E3C",
+            "id": 1.0,
+            "handle": "frontend"
+          }
+        ],
+        "required": ["id", "handle", "title", "color"],
+        "properties": {
+          "id": {
+            "$id": "#/properties/labels/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [1]
+          },
+          "handle": {
+            "$id": "#/properties/labels/items/properties/handle",
+            "type": "string",
+            "title": "The Handle Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["frontend"]
+          },
+          "title": {
+            "$id": "#/properties/labels/items/properties/title",
+            "type": "string",
+            "title": "The Title Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Frontend"]
+          },
+          "color": {
+            "$id": "#/properties/labels/items/properties/color",
+            "type": "string",
+            "title": "The Color Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["#388E3C"]
+          }
+        }
+      }
+    }
+  }
+}

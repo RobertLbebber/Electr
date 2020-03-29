@@ -1,0 +1,195 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": ["categories", "courses"],
+  "properties": {
+    "categories": {
+      "$id": "#/properties/categories",
+      "type": "array",
+      "title": "The Categories Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/categories/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "color": "green[500]",
+            "label": "Android",
+            "id": 3.0,
+            "value": "android"
+          }
+        ],
+        "required": ["id", "value", "label", "color"],
+        "properties": {
+          "id": {
+            "$id": "#/properties/categories/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [3]
+          },
+          "value": {
+            "$id": "#/properties/categories/items/properties/value",
+            "type": "string",
+            "title": "The Value Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["android"]
+          },
+          "label": {
+            "$id": "#/properties/categories/items/properties/label",
+            "type": "string",
+            "title": "The Label Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Android"]
+          },
+          "color": {
+            "$id": "#/properties/categories/items/properties/color",
+            "type": "string",
+            "title": "The Color Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["green[500]"]
+          }
+        }
+      }
+    },
+    "courses": {
+      "$id": "#/properties/courses",
+      "type": "array",
+      "title": "The Courses Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/courses/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "category": "firebase",
+            "title": "Personalize Your iOS App with Firebase User Management",
+            "updated": "Jun 28, 2017",
+            "id": "1542e43dfaae6ebf226",
+            "length": 90.0,
+            "totalSteps": 11.0,
+            "slug": "personalize-your-ios-app-with-firebase-user-management",
+            "description": "Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "activeStep": 11.0,
+            "steps": "$ref"
+          }
+        ],
+        "required": [
+          "id",
+          "title",
+          "slug",
+          "description",
+          "category",
+          "length",
+          "totalSteps",
+          "activeStep",
+          "updated",
+          "steps"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/courses/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["1542e43dfaae6ebf226"]
+          },
+          "title": {
+            "$id": "#/properties/courses/items/properties/title",
+            "type": "string",
+            "title": "The Title Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Personalize Your iOS App with Firebase User Management"
+            ]
+          },
+          "slug": {
+            "$id": "#/properties/courses/items/properties/slug",
+            "type": "string",
+            "title": "The Slug Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "personalize-your-ios-app-with-firebase-user-management"
+            ]
+          },
+          "description": {
+            "$id": "#/properties/courses/items/properties/description",
+            "type": "string",
+            "title": "The Description Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            ]
+          },
+          "category": {
+            "$id": "#/properties/courses/items/properties/category",
+            "type": "string",
+            "title": "The Category Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["firebase"]
+          },
+          "length": {
+            "$id": "#/properties/courses/items/properties/length",
+            "type": "integer",
+            "title": "The Length Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [90]
+          },
+          "totalSteps": {
+            "$id": "#/properties/courses/items/properties/totalSteps",
+            "type": "integer",
+            "title": "The Totalsteps Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [11]
+          },
+          "activeStep": {
+            "$id": "#/properties/courses/items/properties/activeStep",
+            "type": "integer",
+            "title": "The Activestep Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [11]
+          },
+          "updated": {
+            "$id": "#/properties/courses/items/properties/updated",
+            "type": "string",
+            "title": "The Updated Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Jun 28, 2017"]
+          },
+          "steps": {
+            "$id": "#/properties/courses/items/properties/steps",
+            "type": "string",
+            "title": "The Steps Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["$ref"]
+          }
+        }
+      }
+    }
+  }
+}

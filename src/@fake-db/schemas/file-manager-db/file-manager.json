@@ -1,0 +1,142 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": ["files"],
+  "properties": {
+    "files": {
+      "$id": "#/properties/files",
+      "type": "array",
+      "title": "The Files Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/files/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "owner": "me",
+            "offline": true,
+            "name": "Work Documents",
+            "extention": "",
+            "opened": "July 8, 2017",
+            "created": "July 8, 2017",
+            "modified": "July 8, 2017",
+            "type": "folder",
+            "size": "",
+            "id": "1",
+            "location": "My Files > Documents"
+          }
+        ],
+        "required": [
+          "id",
+          "name",
+          "type",
+          "owner",
+          "size",
+          "modified",
+          "opened",
+          "created",
+          "extention",
+          "location",
+          "offline"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/files/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["1"]
+          },
+          "name": {
+            "$id": "#/properties/files/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Work Documents"]
+          },
+          "type": {
+            "$id": "#/properties/files/items/properties/type",
+            "type": "string",
+            "title": "The Type Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["folder"]
+          },
+          "owner": {
+            "$id": "#/properties/files/items/properties/owner",
+            "type": "string",
+            "title": "The Owner Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["me"]
+          },
+          "size": {
+            "$id": "#/properties/files/items/properties/size",
+            "type": "string",
+            "title": "The Size Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [""]
+          },
+          "modified": {
+            "$id": "#/properties/files/items/properties/modified",
+            "type": "string",
+            "title": "The Modified Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["July 8, 2017"]
+          },
+          "opened": {
+            "$id": "#/properties/files/items/properties/opened",
+            "type": "string",
+            "title": "The Opened Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["July 8, 2017"]
+          },
+          "created": {
+            "$id": "#/properties/files/items/properties/created",
+            "type": "string",
+            "title": "The Created Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["July 8, 2017"]
+          },
+          "extention": {
+            "$id": "#/properties/files/items/properties/extention",
+            "type": "string",
+            "title": "The Extention Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [""]
+          },
+          "location": {
+            "$id": "#/properties/files/items/properties/location",
+            "type": "string",
+            "title": "The Location Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["My Files > Documents"]
+          },
+          "offline": {
+            "$id": "#/properties/files/items/properties/offline",
+            "type": "boolean",
+            "title": "The Offline Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [true]
+          }
+        }
+      }
+    }
+  }
+}

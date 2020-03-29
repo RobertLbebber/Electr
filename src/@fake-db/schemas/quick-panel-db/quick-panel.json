@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": ["notes", "events"],
+  "properties": {
+    "notes": {
+      "$id": "#/properties/notes",
+      "type": "array",
+      "title": "The Notes Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/notes/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "title": "Best songs to listen while working",
+            "detail": "Last edit: May 8th, 2015",
+            "id": 1.0
+          },
+          {
+            "title": "Useful subreddits",
+            "detail": "Last edit: January 12th, 2015",
+            "id": 2.0
+          }
+        ],
+        "required": ["id", "title", "detail"],
+        "properties": {
+          "id": {
+            "$id": "#/properties/notes/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [1]
+          },
+          "title": {
+            "$id": "#/properties/notes/items/properties/title",
+            "type": "string",
+            "title": "The Title Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Best songs to listen while working"]
+          },
+          "detail": {
+            "$id": "#/properties/notes/items/properties/detail",
+            "type": "string",
+            "title": "The Detail Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Last edit: May 8th, 2015"]
+          }
+        }
+      }
+    },
+    "events": {
+      "$id": "#/properties/events",
+      "type": "array",
+      "title": "The Events Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/events/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "title": "Group Meeting",
+            "detail": "In 32 Minutes, Room 1B",
+            "id": 1.0
+          },
+          {
+            "title": "Public Beta Release",
+            "detail": "11:00 PM",
+            "id": 2.0
+          },
+          {
+            "id": 3.0,
+            "title": "Dinner with David",
+            "detail": "17:30 PM"
+          },
+          {
+            "id": 4.0,
+            "title": "Q&A Session",
+            "detail": "20:30 PM"
+          }
+        ],
+        "required": ["id", "title", "detail"],
+        "properties": {
+          "id": {
+            "$id": "#/properties/events/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [1]
+          },
+          "title": {
+            "$id": "#/properties/events/items/properties/title",
+            "type": "string",
+            "title": "The Title Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Group Meeting"]
+          },
+          "detail": {
+            "$id": "#/properties/events/items/properties/detail",
+            "type": "string",
+            "title": "The Detail Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["In 32 Minutes, Room 1B"]
+          }
+        }
+      }
+    }
+  }
+}

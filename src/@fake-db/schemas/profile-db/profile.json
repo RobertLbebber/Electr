@@ -1,0 +1,675 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": ["timeline", "photosVideos", "about"],
+  "properties": {
+    "timeline": {
+      "$id": "#/properties/timeline",
+      "type": "object",
+      "title": "The Timeline Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "required": ["activities", "posts"],
+      "properties": {
+        "activities": {
+          "$id": "#/properties/timeline/properties/activities",
+          "type": "array",
+          "title": "The Activities Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": [],
+          "items": {
+            "$id": "#/properties/timeline/properties/activities/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "required": ["id", "user", "message", "time"],
+            "properties": {
+              "id": {
+                "$id": "#/properties/timeline/properties/activities/items/properties/id",
+                "type": "string",
+                "title": "The Id Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["1"]
+              },
+              "user": {
+                "$id": "#/properties/timeline/properties/activities/items/properties/user",
+                "type": "object",
+                "title": "The User Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "avatar": "assets/images/avatars/alice.jpg",
+                    "name": "Alice Freeman"
+                  }
+                ],
+                "required": ["name", "avatar"],
+                "properties": {
+                  "name": {
+                    "$id": "#/properties/timeline/properties/activities/items/properties/user/properties/name",
+                    "type": "string",
+                    "title": "The Name Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["Alice Freeman"]
+                  },
+                  "avatar": {
+                    "$id": "#/properties/timeline/properties/activities/items/properties/user/properties/avatar",
+                    "type": "string",
+                    "title": "The Avatar Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["assets/images/avatars/alice.jpg"]
+                  }
+                }
+              },
+              "message": {
+                "$id": "#/properties/timeline/properties/activities/items/properties/message",
+                "type": "string",
+                "title": "The Message Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["started following you."]
+              },
+              "time": {
+                "$id": "#/properties/timeline/properties/activities/items/properties/time",
+                "type": "string",
+                "title": "The Time Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["13 mins. ago"]
+              }
+            }
+          }
+        },
+        "posts": {
+          "$id": "#/properties/timeline/properties/posts",
+          "type": "array",
+          "title": "The Posts Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": [],
+          "items": {
+            "$id": "#/properties/timeline/properties/posts/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "required": [
+              "id",
+              "user",
+              "message",
+              "time",
+              "type",
+              "like",
+              "share",
+              "media",
+              "comments"
+            ],
+            "properties": {
+              "id": {
+                "$id": "#/properties/timeline/properties/posts/items/properties/id",
+                "type": "string",
+                "title": "The Id Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["1"]
+              },
+              "user": {
+                "$id": "#/properties/timeline/properties/posts/items/properties/user",
+                "type": "object",
+                "title": "The User Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "avatar": "assets/images/avatars/garry.jpg",
+                    "name": "Garry Newman"
+                  }
+                ],
+                "required": ["name", "avatar"],
+                "properties": {
+                  "name": {
+                    "$id": "#/properties/timeline/properties/posts/items/properties/user/properties/name",
+                    "type": "string",
+                    "title": "The Name Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["Garry Newman"]
+                  },
+                  "avatar": {
+                    "$id": "#/properties/timeline/properties/posts/items/properties/user/properties/avatar",
+                    "type": "string",
+                    "title": "The Avatar Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["assets/images/avatars/garry.jpg"]
+                  }
+                }
+              },
+              "message": {
+                "$id": "#/properties/timeline/properties/posts/items/properties/message",
+                "type": "string",
+                "title": "The Message Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "Remember the place we were talking about the other night? Found it!"
+                ]
+              },
+              "time": {
+                "$id": "#/properties/timeline/properties/posts/items/properties/time",
+                "type": "string",
+                "title": "The Time Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["32 minutes ago"]
+              },
+              "type": {
+                "$id": "#/properties/timeline/properties/posts/items/properties/type",
+                "type": "string",
+                "title": "The Type Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["post"]
+              },
+              "like": {
+                "$id": "#/properties/timeline/properties/posts/items/properties/like",
+                "type": "integer",
+                "title": "The Like Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [5]
+              },
+              "share": {
+                "$id": "#/properties/timeline/properties/posts/items/properties/share",
+                "type": "integer",
+                "title": "The Share Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [21]
+              },
+              "media": {
+                "$id": "#/properties/timeline/properties/posts/items/properties/media",
+                "type": "object",
+                "title": "The Media Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "preview": "assets/images/profile/morain-lake.jpg",
+                    "type": "image"
+                  }
+                ],
+                "required": ["type", "preview"],
+                "properties": {
+                  "type": {
+                    "$id": "#/properties/timeline/properties/posts/items/properties/media/properties/type",
+                    "type": "string",
+                    "title": "The Type Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["image"]
+                  },
+                  "preview": {
+                    "$id": "#/properties/timeline/properties/posts/items/properties/media/properties/preview",
+                    "type": "string",
+                    "title": "The Preview Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["assets/images/profile/morain-lake.jpg"]
+                  }
+                }
+              },
+              "comments": {
+                "$id": "#/properties/timeline/properties/posts/items/properties/comments",
+                "type": "array",
+                "title": "The Comments Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": [],
+                "items": {
+                  "$id": "#/properties/timeline/properties/posts/items/properties/comments/items",
+                  "type": "object",
+                  "title": "The Items Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": {},
+                  "required": ["id", "user", "time", "message"],
+                  "properties": {
+                    "id": {
+                      "$id": "#/properties/timeline/properties/posts/items/properties/comments/items/properties/id",
+                      "type": "string",
+                      "title": "The Id Schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": ["1"]
+                    },
+                    "user": {
+                      "$id": "#/properties/timeline/properties/posts/items/properties/comments/items/properties/user",
+                      "type": "object",
+                      "title": "The User Schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": {},
+                      "examples": [
+                        {
+                          "avatar": "assets/images/avatars/alice.jpg",
+                          "name": "Alice Freeman"
+                        }
+                      ],
+                      "required": ["name", "avatar"],
+                      "properties": {
+                        "name": {
+                          "$id": "#/properties/timeline/properties/posts/items/properties/comments/items/properties/user/properties/name",
+                          "type": "string",
+                          "title": "The Name Schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": "",
+                          "examples": ["Alice Freeman"]
+                        },
+                        "avatar": {
+                          "$id": "#/properties/timeline/properties/posts/items/properties/comments/items/properties/user/properties/avatar",
+                          "type": "string",
+                          "title": "The Avatar Schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": "",
+                          "examples": ["assets/images/avatars/alice.jpg"]
+                        }
+                      }
+                    },
+                    "time": {
+                      "$id": "#/properties/timeline/properties/posts/items/properties/comments/items/properties/time",
+                      "type": "string",
+                      "title": "The Time Schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": ["June 10, 2015"]
+                    },
+                    "message": {
+                      "$id": "#/properties/timeline/properties/posts/items/properties/comments/items/properties/message",
+                      "type": "string",
+                      "title": "The Message Schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "That’s a wonderful place. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et eleifend ligula. Fusce posuere in sapien ac facilisis. Etiam sit amet justo non felis ornare feugiat."
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "photosVideos": {
+      "$id": "#/properties/photosVideos",
+      "type": "array",
+      "title": "The Photosvideos Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/photosVideos/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "required": ["id", "name", "info", "media"],
+        "properties": {
+          "id": {
+            "$id": "#/properties/photosVideos/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["1"]
+          },
+          "name": {
+            "$id": "#/properties/photosVideos/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["June 2018"]
+          },
+          "info": {
+            "$id": "#/properties/photosVideos/items/properties/info",
+            "type": "string",
+            "title": "The Info Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["5 Photos"]
+          },
+          "media": {
+            "$id": "#/properties/photosVideos/items/properties/media",
+            "type": "array",
+            "title": "The Media Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/photosVideos/items/properties/media/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "required": ["type", "title", "preview"],
+              "properties": {
+                "type": {
+                  "$id": "#/properties/photosVideos/items/properties/media/items/properties/type",
+                  "type": "string",
+                  "title": "The Type Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["photo"]
+                },
+                "title": {
+                  "$id": "#/properties/photosVideos/items/properties/media/items/properties/title",
+                  "type": "string",
+                  "title": "The Title Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["A Walk Amongst Friends"]
+                },
+                "preview": {
+                  "$id": "#/properties/photosVideos/items/properties/media/items/properties/preview",
+                  "type": "string",
+                  "title": "The Preview Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "assets/images/profile/a-walk-amongst-friends-small.jpg"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "about": {
+      "$id": "#/properties/about",
+      "type": "object",
+      "title": "The About Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "required": ["general", "work", "contact", "groups", "friends"],
+      "properties": {
+        "general": {
+          "$id": "#/properties/about/properties/general",
+          "type": "object",
+          "title": "The General Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "required": ["gender", "birthday", "locations", "about"],
+          "properties": {
+            "gender": {
+              "$id": "#/properties/about/properties/general/properties/gender",
+              "type": "string",
+              "title": "The Gender Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": ["Male"]
+            },
+            "birthday": {
+              "$id": "#/properties/about/properties/general/properties/birthday",
+              "type": "string",
+              "title": "The Birthday Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": ["February 30th, 1974"]
+            },
+            "locations": {
+              "$id": "#/properties/about/properties/general/properties/locations",
+              "type": "array",
+              "title": "The Locations Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": [],
+              "items": {
+                "$id": "#/properties/about/properties/general/properties/locations/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["London, UK", "New York, USA"]
+              }
+            },
+            "about": {
+              "$id": "#/properties/about/properties/general/properties/about",
+              "type": "string",
+              "title": "The About Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget pharetra felis, sed ullamcorper dui. Sed et elementum neque. Vestibulum pellente viverra ultrices. Etiam justo augue, vehicula ac gravida a, interdum sit amet nisl. Integer vitae nisi id nibh dictum mollis in vitae tortor."
+              ]
+            }
+          }
+        },
+        "work": {
+          "$id": "#/properties/about/properties/work",
+          "type": "object",
+          "title": "The Work Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "required": ["occupation", "skills", "jobs"],
+          "properties": {
+            "occupation": {
+              "$id": "#/properties/about/properties/work/properties/occupation",
+              "type": "string",
+              "title": "The Occupation Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": ["Developer"]
+            },
+            "skills": {
+              "$id": "#/properties/about/properties/work/properties/skills",
+              "type": "string",
+              "title": "The Skills Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": ["C#, PHP, Javascript, Angular, JS, HTML, CSS"]
+            },
+            "jobs": {
+              "$id": "#/properties/about/properties/work/properties/jobs",
+              "type": "array",
+              "title": "The Jobs Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": [],
+              "items": {
+                "$id": "#/properties/about/properties/work/properties/jobs/items",
+                "type": "object",
+                "title": "The Items Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "required": ["company", "date"],
+                "properties": {
+                  "company": {
+                    "$id": "#/properties/about/properties/work/properties/jobs/items/properties/company",
+                    "type": "string",
+                    "title": "The Company Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["Self-Employed"]
+                  },
+                  "date": {
+                    "$id": "#/properties/about/properties/work/properties/jobs/items/properties/date",
+                    "type": "string",
+                    "title": "The Date Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["2010 - Now"]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "contact": {
+          "$id": "#/properties/about/properties/contact",
+          "type": "object",
+          "title": "The Contact Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "required": ["address", "tel", "websites", "emails"],
+          "properties": {
+            "address": {
+              "$id": "#/properties/about/properties/contact/properties/address",
+              "type": "string",
+              "title": "The Address Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "Ut pharetra luctus est quis sodales. Duis nisi tortor, bibendum eget tincidunt, aliquam ac elit. Mauris nec euismod odio."
+              ]
+            },
+            "tel": {
+              "$id": "#/properties/about/properties/contact/properties/tel",
+              "type": "array",
+              "title": "The Tel Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": [],
+              "items": {
+                "$id": "#/properties/about/properties/contact/properties/tel/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["+6 555 6600", "+9 555 5255"]
+              }
+            },
+            "websites": {
+              "$id": "#/properties/about/properties/contact/properties/websites",
+              "type": "array",
+              "title": "The Websites Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": [],
+              "items": {
+                "$id": "#/properties/about/properties/contact/properties/websites/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["withinpixels.com"]
+              }
+            },
+            "emails": {
+              "$id": "#/properties/about/properties/contact/properties/emails",
+              "type": "array",
+              "title": "The Emails Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": [],
+              "items": {
+                "$id": "#/properties/about/properties/contact/properties/emails/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["mail@withinpixels.com", "mail@creapond.com"]
+              }
+            }
+          }
+        },
+        "groups": {
+          "$id": "#/properties/about/properties/groups",
+          "type": "array",
+          "title": "The Groups Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": [],
+          "items": {
+            "$id": "#/properties/about/properties/groups/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "required": ["id", "name", "category", "members"],
+            "properties": {
+              "id": {
+                "$id": "#/properties/about/properties/groups/items/properties/id",
+                "type": "string",
+                "title": "The Id Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["1"]
+              },
+              "name": {
+                "$id": "#/properties/about/properties/groups/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Android"]
+              },
+              "category": {
+                "$id": "#/properties/about/properties/groups/items/properties/category",
+                "type": "string",
+                "title": "The Category Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Technology"]
+              },
+              "members": {
+                "$id": "#/properties/about/properties/groups/items/properties/members",
+                "type": "string",
+                "title": "The Members Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["1.856.546"]
+              }
+            }
+          }
+        },
+        "friends": {
+          "$id": "#/properties/about/properties/friends",
+          "type": "array",
+          "title": "The Friends Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": [],
+          "items": {
+            "$id": "#/properties/about/properties/friends/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "avatar": "assets/images/avatars/garry.jpg",
+                "name": "Garry Newman",
+                "id": "1"
+              }
+            ],
+            "required": ["id", "name", "avatar"],
+            "properties": {
+              "id": {
+                "$id": "#/properties/about/properties/friends/items/properties/id",
+                "type": "string",
+                "title": "The Id Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["1"]
+              },
+              "name": {
+                "$id": "#/properties/about/properties/friends/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Garry Newman"]
+              },
+              "avatar": {
+                "$id": "#/properties/about/properties/friends/items/properties/avatar",
+                "type": "string",
+                "title": "The Avatar Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["assets/images/avatars/garry.jpg"]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

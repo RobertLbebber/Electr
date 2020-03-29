@@ -1,0 +1,272 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": ["contacts", "user"],
+  "properties": {
+    "contacts": {
+      "$id": "#/properties/contacts",
+      "type": "array",
+      "title": "The Contacts Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/contacts/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "required": [
+          "id",
+          "name",
+          "lastName",
+          "avatar",
+          "nickname",
+          "company",
+          "jobTitle",
+          "email",
+          "phone",
+          "address",
+          "notes"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/contacts/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["5725a680b3249760ea21de52"]
+          },
+          "name": {
+            "$id": "#/properties/contacts/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Abbott"]
+          },
+          "lastName": {
+            "$id": "#/properties/contacts/items/properties/lastName",
+            "type": "string",
+            "title": "The Lastname Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Keitch"]
+          },
+          "avatar": {
+            "$id": "#/properties/contacts/items/properties/avatar",
+            "type": "string",
+            "title": "The Avatar Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["assets/images/avatars/Abbott.jpg"]
+          },
+          "nickname": {
+            "$id": "#/properties/contacts/items/properties/nickname",
+            "type": "string",
+            "title": "The Nickname Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Royalguard"]
+          },
+          "company": {
+            "$id": "#/properties/contacts/items/properties/company",
+            "type": "string",
+            "title": "The Company Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Saois"]
+          },
+          "jobTitle": {
+            "$id": "#/properties/contacts/items/properties/jobTitle",
+            "type": "string",
+            "title": "The Jobtitle Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Digital Archivist"]
+          },
+          "email": {
+            "$id": "#/properties/contacts/items/properties/email",
+            "type": "string",
+            "title": "The Email Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["abbott@withinpixels.com"]
+          },
+          "phone": {
+            "$id": "#/properties/contacts/items/properties/phone",
+            "type": "string",
+            "title": "The Phone Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["+1-202-555-0175"]
+          },
+          "address": {
+            "$id": "#/properties/contacts/items/properties/address",
+            "type": "string",
+            "title": "The Address Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["933 8th Street Stamford, CT 06902"]
+          },
+          "notes": {
+            "$id": "#/properties/contacts/items/properties/notes",
+            "type": "string",
+            "title": "The Notes Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [""]
+          }
+        }
+      }
+    },
+    "user": {
+      "$id": "#/properties/user",
+      "type": "array",
+      "title": "The User Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/user/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "required": [
+          "id",
+          "name",
+          "avatar",
+          "starred",
+          "frequentContacts",
+          "groups"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/user/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["5725a6802d10e277a0f35724"]
+          },
+          "name": {
+            "$id": "#/properties/user/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["John Doe"]
+          },
+          "avatar": {
+            "$id": "#/properties/user/items/properties/avatar",
+            "type": "string",
+            "title": "The Avatar Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["assets/images/avatars/profile.jpg"]
+          },
+          "starred": {
+            "$id": "#/properties/user/items/properties/starred",
+            "type": "array",
+            "title": "The Starred Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/user/items/properties/starred/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "5725a680ae1ae9a3c960d487",
+                "5725a6801146cce777df2a08",
+                "5725a680bbcec3cc32a8488a",
+                "5725a680bc670af746c435e2",
+                "5725a68009e20d0a9e9acf2a"
+              ]
+            }
+          },
+          "frequentContacts": {
+            "$id": "#/properties/user/items/properties/frequentContacts",
+            "type": "array",
+            "title": "The Frequentcontacts Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/user/items/properties/frequentContacts/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "5725a6809fdd915739187ed5",
+                "5725a68031fdbb1db2c1af47",
+                "5725a680606588342058356d",
+                "5725a680e7eb988a58ddf303",
+                "5725a6806acf030f9341e925",
+                "5725a68034cb3968e1f79eac",
+                "5725a6801146cce777df2a08",
+                "5725a680653c265f5c79b5a9"
+              ]
+            }
+          },
+          "groups": {
+            "$id": "#/properties/user/items/properties/groups",
+            "type": "array",
+            "title": "The Groups Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/user/items/properties/groups/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "required": ["id", "name", "contactIds"],
+              "properties": {
+                "id": {
+                  "$id": "#/properties/user/items/properties/groups/items/properties/id",
+                  "type": "string",
+                  "title": "The Id Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["5725a6802d10e277a0f35739"]
+                },
+                "name": {
+                  "$id": "#/properties/user/items/properties/groups/items/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["Friends"]
+                },
+                "contactIds": {
+                  "$id": "#/properties/user/items/properties/groups/items/properties/contactIds",
+                  "type": "array",
+                  "title": "The Contactids Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": [],
+                  "items": {
+                    "$id": "#/properties/user/items/properties/groups/items/properties/contactIds/items",
+                    "type": "string",
+                    "title": "The Items Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "5725a680bbcec3cc32a8488a",
+                      "5725a680e87cb319bd9bd673",
+                      "5725a6802d10e277a0f35775"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

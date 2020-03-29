@@ -1,0 +1,931 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": ["products", "orders"],
+  "properties": {
+    "products": {
+      "$id": "#/properties/products",
+      "type": "array",
+      "title": "The Products Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/products/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "quantity": 3.0,
+            "active": true,
+            "featuredImageId": 1.0,
+            "priceTaxIncl": 10.24,
+            "extraShippingFee": 3.0,
+            "description": "Officia amet eiusmod eu sunt tempor voluptate laboris velit nisi amet enim proident et. Consequat laborum non eiusmod cillum eu exercitation. Qui adipisicing est fugiat eiusmod esse. Sint aliqua cupidatat pariatur mollit ad est proident reprehenderit. Eiusmod adipisicing laborum incididunt sit aliqua ullamco.",
+            "sku": "A445BV",
+            "priceTaxExcl": 9.309,
+            "weight": "3kg",
+            "categories": ["Canvas Print", "Nature"],
+            "taxRate": 10.0,
+            "height": "24cm",
+            "id": "1",
+            "depth": "15cm",
+            "images": [
+              {
+                "url": "assets/images/ecommerce/a-walk-amongst-friends.jpg",
+                "id": 0.0,
+                "type": "image"
+              }
+            ],
+            "tags": ["canvas-print", "nature"],
+            "handle": "a-walk-amongst-friends-canvas-print",
+            "name": "A Walk Amongst Friends - Canvas Print",
+            "comparedPrice": 19.9,
+            "width": "22cm"
+          }
+        ],
+        "required": [
+          "id",
+          "name",
+          "handle",
+          "description",
+          "categories",
+          "tags",
+          "featuredImageId",
+          "images",
+          "priceTaxExcl",
+          "priceTaxIncl",
+          "taxRate",
+          "comparedPrice",
+          "quantity",
+          "sku",
+          "width",
+          "height",
+          "depth",
+          "weight",
+          "extraShippingFee",
+          "active"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/products/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["1"]
+          },
+          "name": {
+            "$id": "#/properties/products/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["A Walk Amongst Friends - Canvas Print"]
+          },
+          "handle": {
+            "$id": "#/properties/products/items/properties/handle",
+            "type": "string",
+            "title": "The Handle Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["a-walk-amongst-friends-canvas-print"]
+          },
+          "description": {
+            "$id": "#/properties/products/items/properties/description",
+            "type": "string",
+            "title": "The Description Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Officia amet eiusmod eu sunt tempor voluptate laboris velit nisi amet enim proident et. Consequat laborum non eiusmod cillum eu exercitation. Qui adipisicing est fugiat eiusmod esse. Sint aliqua cupidatat pariatur mollit ad est proident reprehenderit. Eiusmod adipisicing laborum incididunt sit aliqua ullamco."
+            ]
+          },
+          "categories": {
+            "$id": "#/properties/products/items/properties/categories",
+            "type": "array",
+            "title": "The Categories Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/products/items/properties/categories/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": ["Canvas Print", "Nature"]
+            }
+          },
+          "tags": {
+            "$id": "#/properties/products/items/properties/tags",
+            "type": "array",
+            "title": "The Tags Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/products/items/properties/tags/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": ["canvas-print", "nature"]
+            }
+          },
+          "featuredImageId": {
+            "$id": "#/properties/products/items/properties/featuredImageId",
+            "type": "integer",
+            "title": "The Featuredimageid Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [1]
+          },
+          "images": {
+            "$id": "#/properties/products/items/properties/images",
+            "type": "array",
+            "title": "The Images Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/products/items/properties/images/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "id": 0.0,
+                  "type": "image",
+                  "url": "assets/images/ecommerce/a-walk-amongst-friends.jpg"
+                }
+              ],
+              "required": ["id", "url", "type"],
+              "properties": {
+                "id": {
+                  "$id": "#/properties/products/items/properties/images/items/properties/id",
+                  "type": "integer",
+                  "title": "The Id Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [0]
+                },
+                "url": {
+                  "$id": "#/properties/products/items/properties/images/items/properties/url",
+                  "type": "string",
+                  "title": "The Url Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "assets/images/ecommerce/a-walk-amongst-friends.jpg"
+                  ]
+                },
+                "type": {
+                  "$id": "#/properties/products/items/properties/images/items/properties/type",
+                  "type": "string",
+                  "title": "The Type Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["image"]
+                }
+              }
+            }
+          },
+          "priceTaxExcl": {
+            "$id": "#/properties/products/items/properties/priceTaxExcl",
+            "type": "number",
+            "title": "The Pricetaxexcl Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [9.309]
+          },
+          "priceTaxIncl": {
+            "$id": "#/properties/products/items/properties/priceTaxIncl",
+            "type": "number",
+            "title": "The Pricetaxincl Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [10.24]
+          },
+          "taxRate": {
+            "$id": "#/properties/products/items/properties/taxRate",
+            "type": "integer",
+            "title": "The Taxrate Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [10]
+          },
+          "comparedPrice": {
+            "$id": "#/properties/products/items/properties/comparedPrice",
+            "type": "number",
+            "title": "The Comparedprice Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [19.9]
+          },
+          "quantity": {
+            "$id": "#/properties/products/items/properties/quantity",
+            "type": "integer",
+            "title": "The Quantity Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [3]
+          },
+          "sku": {
+            "$id": "#/properties/products/items/properties/sku",
+            "type": "string",
+            "title": "The Sku Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["A445BV"]
+          },
+          "width": {
+            "$id": "#/properties/products/items/properties/width",
+            "type": "string",
+            "title": "The Width Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["22cm"]
+          },
+          "height": {
+            "$id": "#/properties/products/items/properties/height",
+            "type": "string",
+            "title": "The Height Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["24cm"]
+          },
+          "depth": {
+            "$id": "#/properties/products/items/properties/depth",
+            "type": "string",
+            "title": "The Depth Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["15cm"]
+          },
+          "weight": {
+            "$id": "#/properties/products/items/properties/weight",
+            "type": "string",
+            "title": "The Weight Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["3kg"]
+          },
+          "extraShippingFee": {
+            "$id": "#/properties/products/items/properties/extraShippingFee",
+            "type": "integer",
+            "title": "The Extrashippingfee Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [3]
+          },
+          "active": {
+            "$id": "#/properties/products/items/properties/active",
+            "type": "boolean",
+            "title": "The Active Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [true]
+          }
+        }
+      }
+    },
+    "orders": {
+      "$id": "#/properties/orders",
+      "type": "array",
+      "title": "The Orders Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/orders/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "customer": {
+              "phone": "+1-202-555-0175",
+              "company": "Saois",
+              "invoiceAddress": {
+                "lat": 40.7424739,
+                "lng": -73.99283919999999,
+                "address": "704 6th Ave, New York, NY 10010, USA"
+              },
+              "shippingAddress": {
+                "lat": 41.2183223,
+                "lng": -95.8420876,
+                "address": "377 E South Omaha Bridge Rd, Council Bluffs, IA 51501, USA"
+              },
+              "lastName": "Bullock",
+              "email": "abbott@withinpixels.com",
+              "jobTitle": "Digital Archivist",
+              "id": 1.0,
+              "avatar": "assets/images/avatars/Abbott.jpg",
+              "firstName": "Dollie"
+            },
+            "subtotal": "39.97",
+            "total": "73.31",
+            "status": [
+              {
+                "id": 13.0,
+                "name": "On pre-order (not paid)",
+                "date": "2016/04/03 10:06:18",
+                "color": "purple-300"
+              },
+              {
+                "id": 1.0,
+                "name": "Awaiting check payment",
+                "date": "2015/03/17 18:28:37",
+                "color": "blue-500"
+              }
+            ],
+            "shippingDetails": [
+              {
+                "tracking": "",
+                "fee": "7.00",
+                "date": "2015/04/10 07:03:52",
+                "carrier": "TNT",
+                "weight": "10.44"
+              }
+            ],
+            "tax": "77.44",
+            "id": "1",
+            "products": [
+              {
+                "image": "assets/images/ecommerce/a-walk-amongst-friends.jpg",
+                "name": "A Walk Amongst Friends - Canvas Print",
+                "total": "10.24",
+                "price": "10.24",
+                "quantity": 1.0,
+                "id": 1.0
+              },
+              {
+                "name": "Lago di Braies - Canvas Print",
+                "total": "24.62",
+                "quantity": 1.0,
+                "price": "24.62",
+                "id": 2.0,
+                "image": "assets/images/ecommerce/lago-di-braies.jpg"
+              },
+              {
+                "total": "49.29",
+                "price": "49.29",
+                "quantity": 1.0,
+                "id": 3.0,
+                "image": "assets/images/ecommerce/never-stop-changing.jpg",
+                "name": "Never Stop Changing - Canvas Print"
+              }
+            ],
+            "date": "2015/04/25 02:07:59",
+            "payment": {
+              "method": "Credit Card",
+              "amount": "73.31",
+              "date": "2016/02/23 15:50:23",
+              "transactionId": "2a894b9e"
+            },
+            "discount": "-10.17",
+            "reference": "70d4d7d0"
+          }
+        ],
+        "required": [
+          "id",
+          "reference",
+          "subtotal",
+          "tax",
+          "discount",
+          "total",
+          "date",
+          "customer",
+          "products",
+          "status",
+          "payment",
+          "shippingDetails"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/orders/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["1"]
+          },
+          "reference": {
+            "$id": "#/properties/orders/items/properties/reference",
+            "type": "string",
+            "title": "The Reference Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["70d4d7d0"]
+          },
+          "subtotal": {
+            "$id": "#/properties/orders/items/properties/subtotal",
+            "type": "string",
+            "title": "The Subtotal Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["39.97"]
+          },
+          "tax": {
+            "$id": "#/properties/orders/items/properties/tax",
+            "type": "string",
+            "title": "The Tax Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["77.44"]
+          },
+          "discount": {
+            "$id": "#/properties/orders/items/properties/discount",
+            "type": "string",
+            "title": "The Discount Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["-10.17"]
+          },
+          "total": {
+            "$id": "#/properties/orders/items/properties/total",
+            "type": "string",
+            "title": "The Total Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["73.31"]
+          },
+          "date": {
+            "$id": "#/properties/orders/items/properties/date",
+            "type": "string",
+            "title": "The Date Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["2015/04/25 02:07:59"]
+          },
+          "customer": {
+            "$id": "#/properties/orders/items/properties/customer",
+            "type": "object",
+            "title": "The Customer Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "firstName": "Dollie",
+                "phone": "+1-202-555-0175",
+                "invoiceAddress": {
+                  "address": "704 6th Ave, New York, NY 10010, USA",
+                  "lat": 40.7424739,
+                  "lng": -73.99283919999999
+                },
+                "company": "Saois",
+                "shippingAddress": {
+                  "lng": -95.8420876,
+                  "address": "377 E South Omaha Bridge Rd, Council Bluffs, IA 51501, USA",
+                  "lat": 41.2183223
+                },
+                "lastName": "Bullock",
+                "email": "abbott@withinpixels.com",
+                "id": 1.0,
+                "jobTitle": "Digital Archivist",
+                "avatar": "assets/images/avatars/Abbott.jpg"
+              }
+            ],
+            "required": [
+              "id",
+              "firstName",
+              "lastName",
+              "avatar",
+              "company",
+              "jobTitle",
+              "email",
+              "phone",
+              "invoiceAddress",
+              "shippingAddress"
+            ],
+            "properties": {
+              "id": {
+                "$id": "#/properties/orders/items/properties/customer/properties/id",
+                "type": "integer",
+                "title": "The Id Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [1]
+              },
+              "firstName": {
+                "$id": "#/properties/orders/items/properties/customer/properties/firstName",
+                "type": "string",
+                "title": "The Firstname Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Dollie"]
+              },
+              "lastName": {
+                "$id": "#/properties/orders/items/properties/customer/properties/lastName",
+                "type": "string",
+                "title": "The Lastname Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Bullock"]
+              },
+              "avatar": {
+                "$id": "#/properties/orders/items/properties/customer/properties/avatar",
+                "type": "string",
+                "title": "The Avatar Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["assets/images/avatars/Abbott.jpg"]
+              },
+              "company": {
+                "$id": "#/properties/orders/items/properties/customer/properties/company",
+                "type": "string",
+                "title": "The Company Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Saois"]
+              },
+              "jobTitle": {
+                "$id": "#/properties/orders/items/properties/customer/properties/jobTitle",
+                "type": "string",
+                "title": "The Jobtitle Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Digital Archivist"]
+              },
+              "email": {
+                "$id": "#/properties/orders/items/properties/customer/properties/email",
+                "type": "string",
+                "title": "The Email Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["abbott@withinpixels.com"]
+              },
+              "phone": {
+                "$id": "#/properties/orders/items/properties/customer/properties/phone",
+                "type": "string",
+                "title": "The Phone Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["+1-202-555-0175"]
+              },
+              "invoiceAddress": {
+                "$id": "#/properties/orders/items/properties/customer/properties/invoiceAddress",
+                "type": "object",
+                "title": "The Invoiceaddress Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "lng": -73.99283919999999,
+                    "address": "704 6th Ave, New York, NY 10010, USA",
+                    "lat": 40.7424739
+                  }
+                ],
+                "required": ["address", "lat", "lng"],
+                "properties": {
+                  "address": {
+                    "$id": "#/properties/orders/items/properties/customer/properties/invoiceAddress/properties/address",
+                    "type": "string",
+                    "title": "The Address Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["704 6th Ave, New York, NY 10010, USA"]
+                  },
+                  "lat": {
+                    "$id": "#/properties/orders/items/properties/customer/properties/invoiceAddress/properties/lat",
+                    "type": "number",
+                    "title": "The Lat Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [40.7424739]
+                  },
+                  "lng": {
+                    "$id": "#/properties/orders/items/properties/customer/properties/invoiceAddress/properties/lng",
+                    "type": "number",
+                    "title": "The Lng Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [-73.99283919999999]
+                  }
+                }
+              },
+              "shippingAddress": {
+                "$id": "#/properties/orders/items/properties/customer/properties/shippingAddress",
+                "type": "object",
+                "title": "The Shippingaddress Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "lat": 41.2183223,
+                    "lng": -95.8420876,
+                    "address": "377 E South Omaha Bridge Rd, Council Bluffs, IA 51501, USA"
+                  }
+                ],
+                "required": ["address", "lat", "lng"],
+                "properties": {
+                  "address": {
+                    "$id": "#/properties/orders/items/properties/customer/properties/shippingAddress/properties/address",
+                    "type": "string",
+                    "title": "The Address Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "377 E South Omaha Bridge Rd, Council Bluffs, IA 51501, USA"
+                    ]
+                  },
+                  "lat": {
+                    "$id": "#/properties/orders/items/properties/customer/properties/shippingAddress/properties/lat",
+                    "type": "number",
+                    "title": "The Lat Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [41.2183223]
+                  },
+                  "lng": {
+                    "$id": "#/properties/orders/items/properties/customer/properties/shippingAddress/properties/lng",
+                    "type": "number",
+                    "title": "The Lng Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [-95.8420876]
+                  }
+                }
+              }
+            }
+          },
+          "products": {
+            "$id": "#/properties/orders/items/properties/products",
+            "type": "array",
+            "title": "The Products Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/orders/items/properties/products/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "id": 1.0,
+                  "image": "assets/images/ecommerce/a-walk-amongst-friends.jpg",
+                  "name": "A Walk Amongst Friends - Canvas Print",
+                  "total": "10.24",
+                  "price": "10.24",
+                  "quantity": 1.0
+                },
+                {
+                  "total": "24.62",
+                  "quantity": 1.0,
+                  "price": "24.62",
+                  "id": 2.0,
+                  "image": "assets/images/ecommerce/lago-di-braies.jpg",
+                  "name": "Lago di Braies - Canvas Print"
+                },
+                {
+                  "price": "49.29",
+                  "quantity": 1.0,
+                  "id": 3.0,
+                  "image": "assets/images/ecommerce/never-stop-changing.jpg",
+                  "name": "Never Stop Changing - Canvas Print",
+                  "total": "49.29"
+                }
+              ],
+              "required": ["id", "name", "price", "quantity", "total", "image"],
+              "properties": {
+                "id": {
+                  "$id": "#/properties/orders/items/properties/products/items/properties/id",
+                  "type": "integer",
+                  "title": "The Id Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [1]
+                },
+                "name": {
+                  "$id": "#/properties/orders/items/properties/products/items/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["A Walk Amongst Friends - Canvas Print"]
+                },
+                "price": {
+                  "$id": "#/properties/orders/items/properties/products/items/properties/price",
+                  "type": "string",
+                  "title": "The Price Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["10.24"]
+                },
+                "quantity": {
+                  "$id": "#/properties/orders/items/properties/products/items/properties/quantity",
+                  "type": "integer",
+                  "title": "The Quantity Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [1]
+                },
+                "total": {
+                  "$id": "#/properties/orders/items/properties/products/items/properties/total",
+                  "type": "string",
+                  "title": "The Total Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["10.24"]
+                },
+                "image": {
+                  "$id": "#/properties/orders/items/properties/products/items/properties/image",
+                  "type": "string",
+                  "title": "The Image Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "assets/images/ecommerce/a-walk-amongst-friends.jpg"
+                  ]
+                }
+              }
+            }
+          },
+          "status": {
+            "$id": "#/properties/orders/items/properties/status",
+            "type": "array",
+            "title": "The Status Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/orders/items/properties/status/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "name": "On pre-order (not paid)",
+                  "date": "2016/04/03 10:06:18",
+                  "color": "purple-300",
+                  "id": 13.0
+                },
+                {
+                  "name": "Awaiting check payment",
+                  "date": "2015/03/17 18:28:37",
+                  "color": "blue-500",
+                  "id": 1.0
+                }
+              ],
+              "required": ["id", "name", "color", "date"],
+              "properties": {
+                "id": {
+                  "$id": "#/properties/orders/items/properties/status/items/properties/id",
+                  "type": "integer",
+                  "title": "The Id Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [13]
+                },
+                "name": {
+                  "$id": "#/properties/orders/items/properties/status/items/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["On pre-order (not paid)"]
+                },
+                "color": {
+                  "$id": "#/properties/orders/items/properties/status/items/properties/color",
+                  "type": "string",
+                  "title": "The Color Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["purple-300"]
+                },
+                "date": {
+                  "$id": "#/properties/orders/items/properties/status/items/properties/date",
+                  "type": "string",
+                  "title": "The Date Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["2016/04/03 10:06:18"]
+                }
+              }
+            }
+          },
+          "payment": {
+            "$id": "#/properties/orders/items/properties/payment",
+            "type": "object",
+            "title": "The Payment Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "method": "Credit Card",
+                "amount": "73.31",
+                "date": "2016/02/23 15:50:23",
+                "transactionId": "2a894b9e"
+              }
+            ],
+            "required": ["transactionId", "amount", "method", "date"],
+            "properties": {
+              "transactionId": {
+                "$id": "#/properties/orders/items/properties/payment/properties/transactionId",
+                "type": "string",
+                "title": "The Transactionid Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["2a894b9e"]
+              },
+              "amount": {
+                "$id": "#/properties/orders/items/properties/payment/properties/amount",
+                "type": "string",
+                "title": "The Amount Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["73.31"]
+              },
+              "method": {
+                "$id": "#/properties/orders/items/properties/payment/properties/method",
+                "type": "string",
+                "title": "The Method Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Credit Card"]
+              },
+              "date": {
+                "$id": "#/properties/orders/items/properties/payment/properties/date",
+                "type": "string",
+                "title": "The Date Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["2016/02/23 15:50:23"]
+              }
+            }
+          },
+          "shippingDetails": {
+            "$id": "#/properties/orders/items/properties/shippingDetails",
+            "type": "array",
+            "title": "The Shippingdetails Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/orders/items/properties/shippingDetails/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "date": "2015/04/10 07:03:52",
+                  "carrier": "TNT",
+                  "weight": "10.44",
+                  "tracking": "",
+                  "fee": "7.00"
+                }
+              ],
+              "required": ["tracking", "carrier", "weight", "fee", "date"],
+              "properties": {
+                "tracking": {
+                  "$id": "#/properties/orders/items/properties/shippingDetails/items/properties/tracking",
+                  "type": "string",
+                  "title": "The Tracking Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [""]
+                },
+                "carrier": {
+                  "$id": "#/properties/orders/items/properties/shippingDetails/items/properties/carrier",
+                  "type": "string",
+                  "title": "The Carrier Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["TNT"]
+                },
+                "weight": {
+                  "$id": "#/properties/orders/items/properties/shippingDetails/items/properties/weight",
+                  "type": "string",
+                  "title": "The Weight Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["10.44"]
+                },
+                "fee": {
+                  "$id": "#/properties/orders/items/properties/shippingDetails/items/properties/fee",
+                  "type": "string",
+                  "title": "The Fee Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["7.00"]
+                },
+                "date": {
+                  "$id": "#/properties/orders/items/properties/shippingDetails/items/properties/date",
+                  "type": "string",
+                  "title": "The Date Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": ["2015/04/10 07:03:52"]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

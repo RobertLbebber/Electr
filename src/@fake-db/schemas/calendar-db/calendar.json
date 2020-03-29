@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": ["events"],
+  "properties": {
+    "events": {
+      "$id": "#/properties/events",
+      "type": "array",
+      "title": "The Events Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/events/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "id": 0.0,
+            "title": "All Day Event very long title",
+            "start": "2018-03-31T04:00:00.000Z",
+            "allDay": true,
+            "end": "2018-04-01T04:00:00.000Z"
+          }
+        ],
+        "required": ["id", "title", "allDay", "start", "end"],
+        "properties": {
+          "id": {
+            "$id": "#/properties/events/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [0]
+          },
+          "title": {
+            "$id": "#/properties/events/items/properties/title",
+            "type": "string",
+            "title": "The Title Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["All Day Event very long title"]
+          },
+          "allDay": {
+            "$id": "#/properties/events/items/properties/allDay",
+            "type": "boolean",
+            "title": "The Allday Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [true]
+          },
+          "start": {
+            "$id": "#/properties/events/items/properties/start",
+            "type": "string",
+            "title": "The Start Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["2018-03-31T04:00:00.000Z"]
+          },
+          "end": {
+            "$id": "#/properties/events/items/properties/end",
+            "type": "string",
+            "title": "The End Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["2018-04-01T04:00:00.000Z"]
+          }
+        }
+      }
+    }
+  }
+}

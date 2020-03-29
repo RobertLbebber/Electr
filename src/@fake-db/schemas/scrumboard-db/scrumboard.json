@@ -1,0 +1,876 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "required": [
+        "boards"
+    ],
+    "properties": {
+        "boards": {
+            "$id": "#/properties/boards",
+            "type": "array",
+            "title": "The Boards Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+                "$id": "#/properties/boards/items",
+                "type": "object",
+                "title": "The Items Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "cards": [
+                            {
+                                "due": "2017-02-02T11:20:34.000Z",
+                                "description": "We need a service to monitor and recover failed APIs.",
+                                "attachments": [],
+                                "activities": [],
+                                "name": "API recover and monitoring",
+                                "idAttachmentCover": "",
+                                "idLabels": [
+                                    "26022e4129ad3a5sc28b36cd",
+                                    "5640635e19ad3a5dc21416b2"
+                                ],
+                                "idMembers": [
+                                    "36027j1930450d8bf7b10158",
+                                    "76027g1930450d8bf7b10958"
+                                ],
+                                "checklists": [
+                                    {
+                                        "name": "API Monitoring",
+                                        "checkItems": [
+                                            {
+                                                "name": "Simple dashboard design",
+                                                "checked": false,
+                                                "id": 1.0
+                                            },
+                                            {
+                                                "name": "Should be able to see different time periods on the same dashboard",
+                                                "checked": true,
+                                                "id": 2.0
+                                            },
+                                            {
+                                                "name": "Different colors for different clusters",
+                                                "checked": true,
+                                                "id": 3.0
+                                            }
+                                        ],
+                                        "id": "6926.2b31d119e4a.889401e0ca7a0.13ad8ce2e569d.976e54e8b5d87.456afccd7e820.d6c77106a"
+                                    },
+                                    {
+                                        "name": "API Recovery",
+                                        "checkItems": [
+                                            {
+                                                "name": "Warning notifications to all developers",
+                                                "checked": false,
+                                                "id": 1.0
+                                            },
+                                            {
+                                                "name": "Immediate recovery options attached to the notifications",
+                                                "checked": true,
+                                                "id": 2.0
+                                            },
+                                            {
+                                                "name": "Backups every 6hours",
+                                                "checked": false,
+                                                "id": 3.0
+                                            }
+                                        ],
+                                        "id": "7c22.5261c7924387f.248e8b1d32205.003f7a9f501d1.1d48dcdbe8b23.8099dcc5f75a7.29a966196"
+                                    }
+                                ],
+                                "subscribed": true,
+                                "id": "7987.9740ba532b0d4.f9d12243f7362.507c0738dc561.87fba0a03df6e.75e6508cacf10.7a9835b54"
+                            }
+                        ],
+                        "members": [
+                            {
+                                "id": "56027c1930450d8bf7b10758",
+                                "avatar": "assets/images/avatars/alice.jpg",
+                                "name": "Alice Freeman"
+                            }
+                        ],
+                        "uri": "acme-frontend-application",
+                        "id": "32gfhaf2",
+                        "lists": [
+                            {
+                                "idCards": [
+                                    "5603a2a3cab0c8300f6096b3",
+                                    "44d1.2b51ea6cc2b5d.21f4a3412e857.8ffa2d8b44ad9.ac87215ed53a1.67d4921ad8f8d.9f318bcb2"
+                                ],
+                                "id": "56027cf5a2ca3839a5d36103",
+                                "name": "Design"
+                            }
+                        ],
+                        "labels": [
+                            {
+                                "name": "High Priority",
+                                "id": "26022e4129ad3a5sc28b36cd",
+                                "class": "bg-red text-white"
+                            }
+                        ],
+                        "name": "ACME Frontend Application",
+                        "settings": {
+                            "subscribed": false,
+                            "color": "fuse-dark",
+                            "cardCoverImages": true
+                        }
+                    },
+                    {
+                        "members": [
+                            {
+                                "avatar": "assets/images/avatars/alice.jpg",
+                                "name": "Alice Freeman",
+                                "id": "56027c1930450d8bf7b10758"
+                            }
+                        ],
+                        "uri": "acme-backend-application",
+                        "id": "27cfcbe1",
+                        "lists": [
+                            {
+                                "id": "56027cf5a2ca3839a5d36103",
+                                "name": "Designs",
+                                "idCards": [
+                                    "5603a2a3cab0c8300f6096b3"
+                                ]
+                            }
+                        ],
+                        "labels": [
+                            {
+                                "name": "Design",
+                                "id": "56027e4119ad3a5dc28b36cd",
+                                "class": "bg-orange text-white"
+                            }
+                        ],
+                        "name": "ACME Backend Application",
+                        "settings": {
+                            "subscribed": false,
+                            "color": "blue-grey",
+                            "cardCoverImages": true
+                        },
+                        "cards": [
+                            {
+                                "idLabels": [
+                                    "56027e4119ad3a5dc28b36cd",
+                                    "5640635e19ad3a5dc21416b2"
+                                ],
+                                "idMembers": [
+                                    "56027c1930450d8bf7b10758",
+                                    "36027j1930450d8bf7b10158"
+                                ],
+                                "checklists": [
+                                    {
+                                        "checkItems": [
+                                            {
+                                                "id": 1.0,
+                                                "name": "Implement a calendar library",
+                                                "checked": false
+                                            }
+                                        ],
+                                        "id": "63021cfdbe1x72wcf1fc451v",
+                                        "name": "Checklist"
+                                    },
+                                    {
+                                        "id": "74031cfdbe1x72wcz1dc166z",
+                                        "name": "Checklist 2",
+                                        "checkItems": [
+                                            {
+                                                "id": 1.0,
+                                                "name": "Replace event colors with Material Design colors",
+                                                "checked": true
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "subscribed": true,
+                                "id": "5603a2a3cab0c8300f6096b3",
+                                "due": null,
+                                "description": "",
+                                "attachments": [
+                                    {
+                                        "name": "calendar-app-design.jpg",
+                                        "src": "assets/images/scrumboard/calendar.jpg",
+                                        "id": "56027cfcbe1b72ecf1fc452a",
+                                        "type": "image",
+                                        "time": "Added Nov 1 at 12:34PM"
+                                    }
+                                ],
+                                "activities": [
+                                    {
+                                        "id": 1.0,
+                                        "message": "We should be able to add moment.js without any problems",
+                                        "type": "comment",
+                                        "time": "12 mins. ago",
+                                        "idMember": "56027c1930450d8bf7b10758"
+                                    }
+                                ],
+                                "name": "Calendar App Design",
+                                "idAttachmentCover": "56027cfcbe1b72ecf1fc452a"
+                            },
+                            {
+                                "id": "5637273da9b93bb84743a0f9",
+                                "due": null,
+                                "attachments": [
+                                    {
+                                        "id": "5603a2ae2bbd55bb2db57478",
+                                        "type": "image",
+                                        "time": "Added Nov 1 at 12:34PM",
+                                        "name": "mail-app-design.jpg",
+                                        "src": "assets/images/scrumboard/mail.jpg"
+                                    }
+                                ],
+                                "description": "",
+                                "idAttachmentCover": "5603a2ae2bbd55bb2db57478",
+                                "name": "Fix Splash Screen bugs",
+                                "activities": [],
+                                "idMembers": [
+                                    "56027c1930450d8bf7b10758"
+                                ],
+                                "idLabels": [],
+                                "checklists": [],
+                                "subscribed": true
+                            }
+                        ]
+                    }
+                ],
+                "required": [
+                    "id",
+                    "name",
+                    "uri",
+                    "settings",
+                    "lists",
+                    "cards",
+                    "members",
+                    "labels"
+                ],
+                "properties": {
+                    "id": {
+                        "$id": "#/properties/boards/items/properties/id",
+                        "type": "string",
+                        "title": "The Id Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "32gfhaf2"
+                        ]
+                    },
+                    "name": {
+                        "$id": "#/properties/boards/items/properties/name",
+                        "type": "string",
+                        "title": "The Name Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "ACME Frontend Application"
+                        ]
+                    },
+                    "uri": {
+                        "$id": "#/properties/boards/items/properties/uri",
+                        "type": "string",
+                        "title": "The Uri Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "acme-frontend-application"
+                        ]
+                    },
+                    "settings": {
+                        "$id": "#/properties/boards/items/properties/settings",
+                        "type": "object",
+                        "title": "The Settings Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "subscribed": false,
+                                "color": "fuse-dark",
+                                "cardCoverImages": true
+                            }
+                        ],
+                        "required": [
+                            "color",
+                            "subscribed",
+                            "cardCoverImages"
+                        ],
+                        "properties": {
+                            "color": {
+                                "$id": "#/properties/boards/items/properties/settings/properties/color",
+                                "type": "string",
+                                "title": "The Color Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "fuse-dark"
+                                ]
+                            },
+                            "subscribed": {
+                                "$id": "#/properties/boards/items/properties/settings/properties/subscribed",
+                                "type": "boolean",
+                                "title": "The Subscribed Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": false,
+                                "examples": [
+                                    false
+                                ]
+                            },
+                            "cardCoverImages": {
+                                "$id": "#/properties/boards/items/properties/settings/properties/cardCoverImages",
+                                "type": "boolean",
+                                "title": "The Cardcoverimages Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": false,
+                                "examples": [
+                                    true
+                                ]
+                            }
+                        }
+                    },
+                    "lists": {
+                        "$id": "#/properties/boards/items/properties/lists",
+                        "type": "array",
+                        "title": "The Lists Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "items": {
+                            "$id": "#/properties/boards/items/properties/lists/items",
+                            "type": "object",
+                            "title": "The Items Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "examples": [
+                                {
+                                    "id": "56027cf5a2ca3839a5d36103",
+                                    "name": "Design",
+                                    "idCards": [
+                                        "5603a2a3cab0c8300f6096b3",
+                                        "44d1.2b51ea6cc2b5d.21f4a3412e857.8ffa2d8b44ad9.ac87215ed53a1.67d4921ad8f8d.9f318bcb2"
+                                    ]
+                                }
+                            ],
+                            "required": [
+                                "id",
+                                "name",
+                                "idCards"
+                            ],
+                            "properties": {
+                                "id": {
+                                    "$id": "#/properties/boards/items/properties/lists/items/properties/id",
+                                    "type": "string",
+                                    "title": "The Id Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "56027cf5a2ca3839a5d36103"
+                                    ]
+                                },
+                                "name": {
+                                    "$id": "#/properties/boards/items/properties/lists/items/properties/name",
+                                    "type": "string",
+                                    "title": "The Name Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "Design"
+                                    ]
+                                },
+                                "idCards": {
+                                    "$id": "#/properties/boards/items/properties/lists/items/properties/idCards",
+                                    "type": "array",
+                                    "title": "The Idcards Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": [],
+                                    "items": {
+                                        "$id": "#/properties/boards/items/properties/lists/items/properties/idCards/items",
+                                        "type": "string",
+                                        "title": "The Items Schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "5603a2a3cab0c8300f6096b3",
+                                            "44d1.2b51ea6cc2b5d.21f4a3412e857.8ffa2d8b44ad9.ac87215ed53a1.67d4921ad8f8d.9f318bcb2"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "cards": {
+                        "$id": "#/properties/boards/items/properties/cards",
+                        "type": "array",
+                        "title": "The Cards Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "items": {
+                            "$id": "#/properties/boards/items/properties/cards/items",
+                            "type": "object",
+                            "title": "The Items Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "examples": [
+                                {
+                                    "subscribed": true,
+                                    "id": "7987.9740ba532b0d4.f9d12243f7362.507c0738dc561.87fba0a03df6e.75e6508cacf10.7a9835b54",
+                                    "due": "2017-02-02T11:20:34.000Z",
+                                    "attachments": [],
+                                    "description": "We need a service to monitor and recover failed APIs.",
+                                    "idAttachmentCover": "",
+                                    "name": "API recover and monitoring",
+                                    "activities": [],
+                                    "idLabels": [
+                                        "26022e4129ad3a5sc28b36cd",
+                                        "5640635e19ad3a5dc21416b2"
+                                    ],
+                                    "idMembers": [
+                                        "36027j1930450d8bf7b10158",
+                                        "76027g1930450d8bf7b10958"
+                                    ],
+                                    "checklists": [
+                                        {
+                                            "name": "API Monitoring",
+                                            "checkItems": [
+                                                {
+                                                    "id": 1.0,
+                                                    "name": "Simple dashboard design",
+                                                    "checked": false
+                                                },
+                                                {
+                                                    "name": "Should be able to see different time periods on the same dashboard",
+                                                    "checked": true,
+                                                    "id": 2.0
+                                                },
+                                                {
+                                                    "checked": true,
+                                                    "id": 3.0,
+                                                    "name": "Different colors for different clusters"
+                                                }
+                                            ],
+                                            "id": "6926.2b31d119e4a.889401e0ca7a0.13ad8ce2e569d.976e54e8b5d87.456afccd7e820.d6c77106a"
+                                        },
+                                        {
+                                            "name": "API Recovery",
+                                            "checkItems": [
+                                                {
+                                                    "name": "Warning notifications to all developers",
+                                                    "checked": false,
+                                                    "id": 1.0
+                                                },
+                                                {
+                                                    "name": "Immediate recovery options attached to the notifications",
+                                                    "checked": true,
+                                                    "id": 2.0
+                                                },
+                                                {
+                                                    "name": "Backups every 6hours",
+                                                    "checked": false,
+                                                    "id": 3.0
+                                                }
+                                            ],
+                                            "id": "7c22.5261c7924387f.248e8b1d32205.003f7a9f501d1.1d48dcdbe8b23.8099dcc5f75a7.29a966196"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "required": [
+                                "id",
+                                "name",
+                                "description",
+                                "idAttachmentCover",
+                                "idMembers",
+                                "idLabels",
+                                "attachments",
+                                "subscribed",
+                                "checklists",
+                                "activities",
+                                "due"
+                            ],
+                            "properties": {
+                                "id": {
+                                    "$id": "#/properties/boards/items/properties/cards/items/properties/id",
+                                    "type": "string",
+                                    "title": "The Id Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "7987.9740ba532b0d4.f9d12243f7362.507c0738dc561.87fba0a03df6e.75e6508cacf10.7a9835b54"
+                                    ]
+                                },
+                                "name": {
+                                    "$id": "#/properties/boards/items/properties/cards/items/properties/name",
+                                    "type": "string",
+                                    "title": "The Name Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "API recover and monitoring"
+                                    ]
+                                },
+                                "description": {
+                                    "$id": "#/properties/boards/items/properties/cards/items/properties/description",
+                                    "type": "string",
+                                    "title": "The Description Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "We need a service to monitor and recover failed APIs."
+                                    ]
+                                },
+                                "idAttachmentCover": {
+                                    "$id": "#/properties/boards/items/properties/cards/items/properties/idAttachmentCover",
+                                    "type": "string",
+                                    "title": "The Idattachmentcover Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        ""
+                                    ]
+                                },
+                                "idMembers": {
+                                    "$id": "#/properties/boards/items/properties/cards/items/properties/idMembers",
+                                    "type": "array",
+                                    "title": "The Idmembers Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": [],
+                                    "items": {
+                                        "$id": "#/properties/boards/items/properties/cards/items/properties/idMembers/items",
+                                        "type": "string",
+                                        "title": "The Items Schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "36027j1930450d8bf7b10158",
+                                            "76027g1930450d8bf7b10958"
+                                        ]
+                                    }
+                                },
+                                "idLabels": {
+                                    "$id": "#/properties/boards/items/properties/cards/items/properties/idLabels",
+                                    "type": "array",
+                                    "title": "The Idlabels Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": [],
+                                    "items": {
+                                        "$id": "#/properties/boards/items/properties/cards/items/properties/idLabels/items",
+                                        "type": "string",
+                                        "title": "The Items Schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "26022e4129ad3a5sc28b36cd",
+                                            "5640635e19ad3a5dc21416b2"
+                                        ]
+                                    }
+                                },
+                                "attachments": {
+                                    "$id": "#/properties/boards/items/properties/cards/items/properties/attachments",
+                                    "type": "array",
+                                    "title": "The Attachments Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": []
+                                },
+                                "subscribed": {
+                                    "$id": "#/properties/boards/items/properties/cards/items/properties/subscribed",
+                                    "type": "boolean",
+                                    "title": "The Subscribed Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": false,
+                                    "examples": [
+                                        true
+                                    ]
+                                },
+                                "checklists": {
+                                    "$id": "#/properties/boards/items/properties/cards/items/properties/checklists",
+                                    "type": "array",
+                                    "title": "The Checklists Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": [],
+                                    "items": {
+                                        "$id": "#/properties/boards/items/properties/cards/items/properties/checklists/items",
+                                        "type": "object",
+                                        "title": "The Items Schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": {},
+                                        "examples": [
+                                            {
+                                                "id": "6926.2b31d119e4a.889401e0ca7a0.13ad8ce2e569d.976e54e8b5d87.456afccd7e820.d6c77106a",
+                                                "name": "API Monitoring",
+                                                "checkItems": [
+                                                    {
+                                                        "name": "Simple dashboard design",
+                                                        "checked": false,
+                                                        "id": 1.0
+                                                    },
+                                                    {
+                                                        "name": "Should be able to see different time periods on the same dashboard",
+                                                        "checked": true,
+                                                        "id": 2.0
+                                                    },
+                                                    {
+                                                        "checked": true,
+                                                        "id": 3.0,
+                                                        "name": "Different colors for different clusters"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "API Recovery",
+                                                "checkItems": [
+                                                    {
+                                                        "name": "Warning notifications to all developers",
+                                                        "checked": false,
+                                                        "id": 1.0
+                                                    },
+                                                    {
+                                                        "checked": true,
+                                                        "id": 2.0,
+                                                        "name": "Immediate recovery options attached to the notifications"
+                                                    },
+                                                    {
+                                                        "id": 3.0,
+                                                        "name": "Backups every 6hours",
+                                                        "checked": false
+                                                    }
+                                                ],
+                                                "id": "7c22.5261c7924387f.248e8b1d32205.003f7a9f501d1.1d48dcdbe8b23.8099dcc5f75a7.29a966196"
+                                            }
+                                        ],
+                                        "required": [
+                                            "id",
+                                            "name",
+                                            "checkItems"
+                                        ],
+                                        "properties": {
+                                            "id": {
+                                                "$id": "#/properties/boards/items/properties/cards/items/properties/checklists/items/properties/id",
+                                                "type": "string",
+                                                "title": "The Id Schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "6926.2b31d119e4a.889401e0ca7a0.13ad8ce2e569d.976e54e8b5d87.456afccd7e820.d6c77106a"
+                                                ]
+                                            },
+                                            "name": {
+                                                "$id": "#/properties/boards/items/properties/cards/items/properties/checklists/items/properties/name",
+                                                "type": "string",
+                                                "title": "The Name Schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "API Monitoring"
+                                                ]
+                                            },
+                                            "checkItems": {
+                                                "$id": "#/properties/boards/items/properties/cards/items/properties/checklists/items/properties/checkItems",
+                                                "type": "array",
+                                                "title": "The Checkitems Schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": [],
+                                                "items": {
+                                                    "$id": "#/properties/boards/items/properties/cards/items/properties/checklists/items/properties/checkItems/items",
+                                                    "type": "object",
+                                                    "title": "The Items Schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": {},
+                                                    "examples": [
+                                                        {
+                                                            "name": "Simple dashboard design",
+                                                            "checked": false,
+                                                            "id": 1.0
+                                                        },
+                                                        {
+                                                            "checked": true,
+                                                            "id": 2.0,
+                                                            "name": "Should be able to see different time periods on the same dashboard"
+                                                        },
+                                                        {
+                                                            "checked": true,
+                                                            "id": 3.0,
+                                                            "name": "Different colors for different clusters"
+                                                        }
+                                                    ],
+                                                    "required": [
+                                                        "id",
+                                                        "name",
+                                                        "checked"
+                                                    ],
+                                                    "properties": {
+                                                        "id": {
+                                                            "$id": "#/properties/boards/items/properties/cards/items/properties/checklists/items/properties/checkItems/items/properties/id",
+                                                            "type": "integer",
+                                                            "title": "The Id Schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": 0,
+                                                            "examples": [
+                                                                1
+                                                            ]
+                                                        },
+                                                        "name": {
+                                                            "$id": "#/properties/boards/items/properties/cards/items/properties/checklists/items/properties/checkItems/items/properties/name",
+                                                            "type": "string",
+                                                            "title": "The Name Schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "Simple dashboard design"
+                                                            ]
+                                                        },
+                                                        "checked": {
+                                                            "$id": "#/properties/boards/items/properties/cards/items/properties/checklists/items/properties/checkItems/items/properties/checked",
+                                                            "type": "boolean",
+                                                            "title": "The Checked Schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": false,
+                                                            "examples": [
+                                                                false
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "activities": {
+                                    "$id": "#/properties/boards/items/properties/cards/items/properties/activities",
+                                    "type": "array",
+                                    "title": "The Activities Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": []
+                                },
+                                "due": {
+                                    "$id": "#/properties/boards/items/properties/cards/items/properties/due",
+                                    "type": "string",
+                                    "title": "The Due Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "2017-02-02T11:20:34.000Z"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "members": {
+                        "$id": "#/properties/boards/items/properties/members",
+                        "type": "array",
+                        "title": "The Members Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "items": {
+                            "$id": "#/properties/boards/items/properties/members/items",
+                            "type": "object",
+                            "title": "The Items Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "examples": [
+                                {
+                                    "name": "Alice Freeman",
+                                    "id": "56027c1930450d8bf7b10758",
+                                    "avatar": "assets/images/avatars/alice.jpg"
+                                }
+                            ],
+                            "required": [
+                                "id",
+                                "name",
+                                "avatar"
+                            ],
+                            "properties": {
+                                "id": {
+                                    "$id": "#/properties/boards/items/properties/members/items/properties/id",
+                                    "type": "string",
+                                    "title": "The Id Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "56027c1930450d8bf7b10758"
+                                    ]
+                                },
+                                "name": {
+                                    "$id": "#/properties/boards/items/properties/members/items/properties/name",
+                                    "type": "string",
+                                    "title": "The Name Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "Alice Freeman"
+                                    ]
+                                },
+                                "avatar": {
+                                    "$id": "#/properties/boards/items/properties/members/items/properties/avatar",
+                                    "type": "string",
+                                    "title": "The Avatar Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "assets/images/avatars/alice.jpg"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "labels": {
+                        "$id": "#/properties/boards/items/properties/labels",
+                        "type": "array",
+                        "title": "The Labels Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "items": {
+                            "$id": "#/properties/boards/items/properties/labels/items",
+                            "type": "object",
+                            "title": "The Items Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "examples": [
+                                {
+                                    "id": "26022e4129ad3a5sc28b36cd",
+                                    "class": "bg-red text-white",
+                                    "name": "High Priority"
+                                }
+                            ],
+                            "required": [
+                                "id",
+                                "name",
+                                "class"
+                            ],
+                            "properties": {
+                                "id": {
+                                    "$id": "#/properties/boards/items/properties/labels/items/properties/id",
+                                    "type": "string",
+                                    "title": "The Id Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "26022e4129ad3a5sc28b36cd"
+                                    ]
+                                },
+                                "name": {
+                                    "$id": "#/properties/boards/items/properties/labels/items/properties/name",
+                                    "type": "string",
+                                    "title": "The Name Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "High Priority"
+                                    ]
+                                },
+                                "class": {
+                                    "$id": "#/properties/boards/items/properties/labels/items/properties/class",
+                                    "type": "string",
+                                    "title": "The Class Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "bg-red text-white"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

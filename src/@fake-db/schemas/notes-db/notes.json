@@ -1,0 +1,175 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": ["notes", "labels"],
+  "properties": {
+    "notes": {
+      "$id": "#/properties/notes",
+      "type": "array",
+      "title": "The Notes Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/notes/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "time": "2018-02-25T04:01:06.587Z",
+            "title": "",
+            "id": "5739d1fb4d27bc5341fd33s1",
+            "archive": false,
+            "checklist": [],
+            "labels": ["5725a6809fdd915739187ed5"],
+            "image": "",
+            "description": "Find new company name!",
+            "reminder": null
+          }
+        ],
+        "required": [
+          "id",
+          "title",
+          "description",
+          "archive",
+          "image",
+          "time",
+          "reminder",
+          "checklist",
+          "labels"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/notes/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["5739d1fb4d27bc5341fd33s1"]
+          },
+          "title": {
+            "$id": "#/properties/notes/items/properties/title",
+            "type": "string",
+            "title": "The Title Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [""]
+          },
+          "description": {
+            "$id": "#/properties/notes/items/properties/description",
+            "type": "string",
+            "title": "The Description Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Find new company name!"]
+          },
+          "archive": {
+            "$id": "#/properties/notes/items/properties/archive",
+            "type": "boolean",
+            "title": "The Archive Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [false]
+          },
+          "image": {
+            "$id": "#/properties/notes/items/properties/image",
+            "type": "string",
+            "title": "The Image Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [""]
+          },
+          "time": {
+            "$id": "#/properties/notes/items/properties/time",
+            "type": "string",
+            "title": "The Time Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["2018-02-25T04:01:06.587Z"]
+          },
+          "reminder": {
+            "$id": "#/properties/notes/items/properties/reminder",
+            "title": "The Reminder Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [null]
+          },
+          "checklist": {
+            "$id": "#/properties/notes/items/properties/checklist",
+            "type": "array",
+            "title": "The Checklist Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": []
+          },
+          "labels": {
+            "$id": "#/properties/notes/items/properties/labels",
+            "type": "array",
+            "title": "The Labels Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/properties/notes/items/properties/labels/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": ["5725a6809fdd915739187ed5"]
+            }
+          }
+        }
+      }
+    },
+    "labels": {
+      "$id": "#/properties/labels",
+      "type": "array",
+      "title": "The Labels Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "items": {
+        "$id": "#/properties/labels/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "id": "5725a6802d10e277a0f35739",
+            "handle": "family",
+            "name": "Family"
+          }
+        ],
+        "required": ["id", "name", "handle"],
+        "properties": {
+          "id": {
+            "$id": "#/properties/labels/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["5725a6802d10e277a0f35739"]
+          },
+          "name": {
+            "$id": "#/properties/labels/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["Family"]
+          },
+          "handle": {
+            "$id": "#/properties/labels/items/properties/handle",
+            "type": "string",
+            "title": "The Handle Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": ["family"]
+          }
+        }
+      }
+    }
+  }
+}

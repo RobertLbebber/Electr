@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "The Items Schema",
+    "description": "An explanation about the purpose of this instance.",
+    "default": {},
+    "required": ["id", "title", "url", "excerpt"],
+    "properties": {
+      "id": {
+        "$id": "#/items/properties/id",
+        "type": "string",
+        "title": "The Id Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": ["1"]
+      },
+      "title": {
+        "$id": "#/items/properties/title",
+        "type": "string",
+        "title": "The Title Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": ["Dynamically Procrastinate B2C"]
+      },
+      "url": {
+        "$id": "#/items/properties/url",
+        "type": "string",
+        "title": "The Url Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": ["ourwebaddress.com/articles/procrastinate"]
+      },
+      "excerpt": {
+        "$id": "#/items/properties/excerpt",
+        "type": "string",
+        "title": "The Excerpt Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits."
+        ]
+      }
+    }
+  }
+}
