@@ -1,7 +1,7 @@
 import { FuseLoadable } from "@fuse";
 import { PAGE_LANDING_DONATE } from "app/fuse-configs/pageLocations";
 
-export const ResetPassword2PageConfig = {
+export const DonatePageConfig = {
   settings: {
     layout: {
       config: {}

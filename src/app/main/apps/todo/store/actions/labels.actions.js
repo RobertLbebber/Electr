@@ -1,17 +1,17 @@
-import axios from 'axios';
+import axios from "axios";
+import { ApiCatalog } from "electr-common";
+const Todo = ApiCatalog.Categories.Todo;
 
-export const GET_LABELS = '[TODO APP] GET LABELS';
+export const GET_LABELS = "[TODO APP] GET LABELS";
 
-export function getLabels()
-{
-    const request = axios.get('/api/todo-app/labels');
+export function getLabels() {
+  const request = axios.get(Todo.GET_LABELS);
 
-    return (dispatch) =>
-        request.then((response) =>
-            dispatch({
-                type   : GET_LABELS,
-                payload: response.data
-            })
-        );
+  return dispatch =>
+    request.then(response =>
+      dispatch({
+        type: GET_LABELS,
+        payload: response.data
+      })
+    );
 }
-

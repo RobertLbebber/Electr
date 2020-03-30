@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "password": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "profileImg": {
+      "type": "string"
+    },
+    "messages": {
+      "type": "object",
+      "properties": {
+        "collection": {
+          "type": "string"
+        },
+        "via": {
+          "type": "string"
+        }
+      },
+      "required": ["collection", "via"]
+    },
+    "creditCard": {
+      "type": "collection",
+      "properties": {
+        "model": {
+          "type": "string"
+        },
+        "via": {
+          "type": "string"
+        }
+      },
+      "required": ["collection", "via"]
+    }
+  },
+  "required": [
+    "password",
+    "firstName",
+    "lastName",
+    "profileImg",
+    "messages",
+    "creditCard"
+  ]
+}

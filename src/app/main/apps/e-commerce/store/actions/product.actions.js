@@ -1,12 +1,14 @@
 import axios from "axios";
 import { showMessage } from "app/store/actions/fuse";
 import { FuseUtils } from "@fuse";
+import { ApiCatalog } from "electr-common";
+const ECommerce = ApiCatalog.Categories.ECommerce;
 
 export const GET_PRODUCT = "[E-COMMERCE APP] GET PRODUCT";
 export const SAVE_PRODUCT = "[E-COMMERCE APP] SAVE PRODUCT";
 
 export function getProduct(params) {
-  const request = axios.get("/api/e-commerce-app/product", { params });
+  const request = axios.get(ECommerce.GET_PRODUCT, { params });
 
   return dispatch =>
     request.then(response =>
@@ -18,7 +20,7 @@ export function getProduct(params) {
 }
 
 export function saveProduct(data) {
-  const request = axios.post("/api/e-commerce-app/product/save", data);
+  const request = axios.post(ECommerce.POST_PRODUCT_SAVE, data);
 
   return dispatch =>
     request.then(response => {
