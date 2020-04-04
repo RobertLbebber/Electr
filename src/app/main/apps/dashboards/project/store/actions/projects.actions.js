@@ -5,7 +5,7 @@ const ProjectDashboard = ApiCatalog.Categories.ProjectDashboard;
 export const GET_PROJECTS = "[PROJECT DASHBOARD APP] GET PROJECTS";
 
 export function getProjects() {
-  const request = axios.get(ProjectDashboard_GET_PROJECTS);
+  const request = axios.get(ProjectDashboard.GET_PROJECTS);
 
   return dispatch =>
     request.then(response =>

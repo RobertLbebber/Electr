@@ -15,10 +15,6 @@ import {
 import PropTypes from "prop-types";
 import _ from "lodash";
 
-import withReducer from "app/store/withReducer";
-import { bindActionCreators } from "redux";
-import * as Actions from "./store/actions";
-import reducer from "./store/reducers";
 import BackButton from "app/main/components/first-party/inputs/buttons/BackButton";
 // import LocaleContext from "Context/LocaleContext";
 
@@ -30,12 +26,24 @@ const style = theme => ({
   radio: { display: "grid", width: "300px", margin: "auto" }
 });
 
+const STEP = {
+  SETUP: 1,
+  FORM: 2,
+  PREVIEW: 3,
+  DONE: 4
+};
+
 class DonatePage extends Component {
   constructor(props) {
     super(props);
     this._tag = this.constructor.name;
     this.canSubmit = this.canSubmit.bind(this);
-    this.state = { valueIndex: 0, value: null, customValue: 125 };
+    this.state = {
+      valueIndex: 0,
+      value: null,
+      customValue: 125,
+      step: STEP.SETUP
+    };
   }
 
   canSubmit = () => {
@@ -115,51 +123,79 @@ class DonatePage extends Component {
   }
 
   renderPadding(hundo) {
+    return <Grid item xs={3} className={hundo}></Grid>;
+  }
+
+  renderStepSetup({ hundo, qrcode, radio }) {
     return (
-      <Grid item xs={3} className={hundo}>
-        {/* <Box border={3} className={hundo} /> */}
-      </Grid>
+      <React.Fragment>
+        {this.renderPadding(hundo)}
+        <Grid container item xs className={hundo} direction="column">
+          <Grid item xs={1} />
+          <BackButton />
+          <Grid item xs className={hundo}>
+            <Typography>
+              {/* <FormattedMessage id={"Pages.Donation.Header"} /> */}
+              Donate Header Information
+            </Typography>
+            <QRCode
+              className={qrcode}
+              size={300}
+              value={
+                this.props.qrLocation +
+                "_" +
+                this.state.value +
+                "_" +
+                this.state.valueIndex
+              }
+            />
+            <Typography>
+              {/* <FormattedMessage id={"Pages.Donation.Body"} /> */}
+              Donate Body Information
+            </Typography>
+            {this.renderRadiobar(radio)}
+            <ButtonGroup>
+              <Button
+                disabled={!this.canSubmit()}
+                onClick={() => {
+                  this.setState({ step: STEP.FORM });
+                }}
+              />
+            </ButtonGroup>
+          </Grid>
+        </Grid>
+        {this.renderPadding(hundo)}
+      </React.Fragment>
     );
   }
 
+  renderStepForm(classes) {
+    return;
+  }
+  renderStepPreview(classes) {}
+  renderStepDone(classes) {}
+
   render() {
-    let { hundo, qrcode, radio } = this.props.classes;
+    let renderStep;
+    switch (this.state.state) {
+      case STEP.SETUP:
+        renderStep = this.renderStepSetup;
+        break;
+      case STEP.FORM:
+        renderStep = this.renderStepForm;
+        break;
+      case STEP.PREVIEW:
+        renderStep = this.renderStepPreview;
+        break;
+      case STEP.DONE:
+        renderStep = this.renderStepDone;
+        break;
+    }
     return (
-      <div className={this._tag + " " + hundo}>
+      <div className={this._tag + " " + this.props.classes.hundo}>
         <Container>
-          <Grid container className={hundo}>
-            {this.renderPadding(hundo)}
-            <Grid container item xs className={hundo} direction="column">
-              <Grid item xs={1} />
-              <Button onClick={} />
-              <Grid item xs className={hundo}>
-                <Typography>
-                  {/* <FormattedMessage id={"Pages.Donation.Header"} /> */}
-                  Donate Header Information
-                </Typography>
-                <QRCode
-                  className={qrcode}
-                  size={300}
-                  value={
-                    this.props.qrLocation +
-                    "_" +
-                    this.state.value +
-                    "_" +
-                    this.state.valueIndex
-                  }
-                />
-                <Typography>
-                  {/* <FormattedMessage id={"Pages.Donation.Body"} /> */}
-                  Donate Body Information
-                </Typography>
-                {this.renderRadiobar(radio)}
-                <ButtonGroup>
-                  <BackButton />
-                  <Button disabled={!this.canSubmit()} onClick={} />
-                </ButtonGroup>
-              </Grid>
-            </Grid>
-            {this.renderPadding(hundo)}
+          <Grid container className={this.props.classes.hundo}>
+            {renderStep(this.props.classes)}
           </Grid>
         </Container>
       </div>
@@ -174,16 +210,4 @@ DonatePage.propTypes = {
 
 DonatePage.defaultProps = {};
 
-function mapDispatchToProps(dispatch) {
-  return {};
-}
-function mapStateToProps({ donatePage }) {
-  return {};
-}
-
-export default withStyles(style)(
-  withReducer("donatePage", reducer)(
-    DonatePage,
-    connect(mapStateToProps, mapDispatchToProps)
-  )
-);
+export default withStyles(style)(DonatePage);
