@@ -1,27 +1,22 @@
-import React from 'react';
-import {Redirect} from 'react-router-dom';
-import {FuseLoadable} from '@fuse';
+import React from "react";
+import { Redirect } from "react-router-dom";
 
 export const ScrumboardAppConfig = {
-    settings: {
-        layout: {}
+  settings: {
+    layout: {},
+  },
+  routes: [
+    {
+      path: "/apps/scrumboard/boards/:boardId/:boardUri?",
+      component: React.lazy(() => import("./board/Board")),
     },
-    routes  : [
-        {
-            path     : '/apps/scrumboard/boards/:boardId/:boardUri?',
-            component: FuseLoadable({
-                loader: () => import('./board/Board')
-            })
-        },
-        {
-            path     : '/apps/scrumboard/boards',
-            component: FuseLoadable({
-                loader: () => import('./boards/Boards')
-            })
-        },
-        {
-            path     : '/apps/scrumboard',
-            component: () => <Redirect to="/apps/scrumboard/boards"/>
-        }
-    ]
+    {
+      path: "/apps/scrumboard/boards",
+      component: React.lazy(() => import("./boards/Boards")),
+    },
+    {
+      path: "/apps/scrumboard",
+      component: () => <Redirect to="/apps/scrumboard/boards" />,
+    },
+  ],
 };

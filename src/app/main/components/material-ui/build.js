@@ -298,7 +298,7 @@ function writeRouteFile(pages)
         return importPath.replace(/%s/g, componentName, componentName);
     });
 
-    const routeObject = "{ path     : '/components/material-ui/%s', component: FuseLoadable({\n" + "loader: () => import('app/main/components/material-ui/pages/%p')\n" + "}) }";
+    const routeObject = "{ path     : '/components/material-ui/%s', component: \n" + " React.lazy(() => import('app/main/components/material-ui/pages/%p')\n" + "}) }";
     const routes = pages.map(page => {
         const componentName = _.upperFirst(_.camelCase(page));
         return routeObject.allReplace({
@@ -308,7 +308,7 @@ function writeRouteFile(pages)
     });
     const content = Beautify(
         `
-        import {FuseLoadable} from '@fuse';
+        
         
         export const MaterialUIRoutes =  [${routes.join()}];
         `

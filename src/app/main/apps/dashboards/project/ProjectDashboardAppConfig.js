@@ -1,17 +1,13 @@
-import {FuseLoadable} from '@fuse';
-
 export const ProjectDashboardAppConfig = {
-    settings: {
-        layout: {
-            config: {}
-        }
+  settings: {
+    layout: {
+      config: {},
     },
-    routes  : [
-        {
-            path     : '/apps/dashboards/project',
-            component: FuseLoadable({
-                loader: () => import('./ProjectDashboardApp')
-            })
-        }
-    ]
+  },
+  routes: [
+    {
+      path: "/apps/dashboards/project",
+      component: React.lazy(() => import("./ProjectDashboardApp")),
+    },
+  ],
 };

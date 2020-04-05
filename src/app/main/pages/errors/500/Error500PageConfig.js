@@ -1,17 +1,13 @@
-import {FuseLoadable} from '@fuse';
-
 export const Error500PageConfig = {
-    settings: {
-        layout: {
-            config: {}
-        }
+  settings: {
+    layout: {
+      config: {},
     },
-    routes  : [
-        {
-            path     : '/pages/errors/error-500',
-            component: FuseLoadable({
-                loader: () => import('./Error500Page')
-            })
-        }
-    ]
+  },
+  routes: [
+    {
+      path: "/pages/errors/error-500",
+      component: React.lazy(() => import("./Error500Page")),
+    },
+  ],
 };

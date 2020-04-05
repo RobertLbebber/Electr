@@ -43,7 +43,7 @@ const CodeSplittingDoc = () => {
 
                             <FuseHighlight component="pre" className="language-jsx my-16">
                                 {`
-                            import {FuseLoadable} from '@fuse';
+                            
 
                             export const AnalyticsDashboardAppConfig = {
                                 settings: {
@@ -54,8 +54,8 @@ const CodeSplittingDoc = () => {
                                 routes  : [
                                     {
                                         path     : '/apps/dashboards/analytics',
-                                        component: FuseLoadable({
-                                            loader: () => import('./AnalyticsDashboardApp')
+                                        component: 
+                                             React.lazy(() => import('./AnalyticsDashboardApp')
                                         })
                                     }
                                 ]

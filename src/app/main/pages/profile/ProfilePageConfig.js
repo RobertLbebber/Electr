@@ -1,17 +1,13 @@
-import {FuseLoadable} from '@fuse';
-
 export const ProfilePageConfig = {
-    settings: {
-        layout: {
-            config: {}
-        }
+  settings: {
+    layout: {
+      config: {},
     },
-    routes  : [
-        {
-            path     : '/pages/profile',
-            component: FuseLoadable({
-                loader: () => import('./ProfilePage')
-            })
-        }
-    ]
+  },
+  routes: [
+    {
+      path: "/pages/profile",
+      component: React.lazy(() => import("./ProfilePage")),
+    },
+  ],
 };

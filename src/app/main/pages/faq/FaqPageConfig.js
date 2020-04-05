@@ -1,17 +1,13 @@
-import {FuseLoadable} from '@fuse';
-
 export const FaqPageConfig = {
-    settings: {
-        layout: {
-            config: {}
-        }
+  settings: {
+    layout: {
+      config: {},
     },
-    routes  : [
-        {
-            path     : '/pages/faq',
-            component: FuseLoadable({
-                loader: () => import('./FaqPage')
-            })
-        }
-    ]
+  },
+  routes: [
+    {
+      path: "/pages/faq",
+      component: React.lazy(() => import("./FaqPage")),
+    },
+  ],
 };

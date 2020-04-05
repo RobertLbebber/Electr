@@ -1,17 +1,13 @@
-import {FuseLoadable} from '@fuse';
-
 export const ChatAppConfig = {
-    settings: {
-        layout: {
-            config: {}
-        }
+  settings: {
+    layout: {
+      config: {},
     },
-    routes  : [
-        {
-            path     : '/apps/chat',
-            component: FuseLoadable({
-                loader: () => import('./ChatApp')
-            })
-        }
-    ]
+  },
+  routes: [
+    {
+      path: "/apps/chat",
+      component: React.lazy(() => import("./ChatApp")),
+    },
+  ],
 };

@@ -1,17 +1,13 @@
-import {FuseLoadable} from '@fuse';
-
 export const ForgotPassword2PageConfig = {
-    settings: {
-        layout: {
-            config: {}
-        }
+  settings: {
+    layout: {
+      config: {},
     },
-    routes  : [
-        {
-            path     : '/pages/auth/forgot-password-2',
-            component: FuseLoadable({
-                loader: () => import('./ForgotPassword2Page')
-            })
-        }
-    ]
+  },
+  routes: [
+    {
+      path: "/pages/auth/forgot-password-2",
+      component: React.lazy(() => import("./ForgotPassword2Page")),
+    },
+  ],
 };
