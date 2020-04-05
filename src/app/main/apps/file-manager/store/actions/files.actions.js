@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const FileManager = ApiCatalog.Categories.FileManager;
+import { Catalog } from "electr-common";
+const FileManager = Catalog.Categories.FileManager;
 
 export const GET_FILES = "[FILE MANAGER APP] GET FILES";
 

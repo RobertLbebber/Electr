@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const Mail = ApiCatalog.Categories.Mail;
+import { Catalog } from "electr-common";
+const Mail = Catalog.Categories.Mail;
 
 export const GET_FOLDERS = "[MAIL APP] GET FOLDERS";
 

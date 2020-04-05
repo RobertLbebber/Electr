@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const Notes = ApiCatalog.Categories.Notes;
+import { Catalog } from "electr-common";
+const Notes = Catalog.Categories.Notes;
 
 export const GET_LABELS = "[NOTES APP] GET LABELS";
 export const LABELS_DIALOG_OPEN = "[NOTES APP] LABELS DIALOG OPEN";

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { showMessage } from "app/store/actions/fuse";
-import { ApiCatalog } from "electr-common";
-const ECommerce = ApiCatalog.Categories.ECommerce;
+import { Catalog } from "electr-common";
+const ECommerce = Catalog.Categories.ECommerce;
 
 export const GET_ORDER = "[E-COMMERCE APP] GET ORDER";
 export const SAVE_ORDER = "[E-COMMERCE APP] SAVE ORDER";

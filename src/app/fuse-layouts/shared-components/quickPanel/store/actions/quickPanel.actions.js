@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const QuickPanel = ApiCatalog.Categories.QuickPanel;
+import { Catalog } from "electr-common";
+const QuickPanel = Catalog.Categories.QuickPanel;
 
 export const TOGGLE_QUICK_PANEL = "[QUICK PANEL] TOGGLE QUICK PANEL";
 export const GET_QUICK_PANEL_DATA = "[QUICK PANEL] GET DATA";

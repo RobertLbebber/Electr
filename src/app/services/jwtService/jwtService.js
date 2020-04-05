@@ -1,8 +1,8 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 import FuseUtils from "@fuse/FuseUtils";
-import { ApiCatalog } from "electr-common";
-const Auth = ApiCatalog.Categories.Auth;
+import { Catalog } from "electr-common";
+const Auth = Catalog.Categories.Auth;
 
 class jwtService extends FuseUtils.EventEmitter {
   init() {

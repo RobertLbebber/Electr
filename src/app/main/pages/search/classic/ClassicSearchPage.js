@@ -13,8 +13,8 @@ import {
 import { FusePageSimple, FuseAnimate, FuseAnimateGroup } from "@fuse";
 import classNames from "classnames";
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const Search = ApiCatalog.Categories.Search;
+import { Catalog } from "electr-common";
+const Search = Catalog.Categories.Search;
 
 const styles = theme => ({
   title: {

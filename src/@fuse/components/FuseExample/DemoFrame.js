@@ -2,7 +2,7 @@ import React from 'react';
 import {withStyles, createGenerateClassName, jssPreset, MuiThemeProvider} from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import {create} from 'jss';
-import JssProvider from 'react-jss/lib/JssProvider';
+import {JssProvider} from 'react-jss';
 import jssExtend from 'jss-extend';
 import Frame from 'react-frame-component';
 

@@ -14,8 +14,8 @@ import { darken } from "@material-ui/core/styles/colorManipulator";
 import { FuseAnimate } from "@fuse";
 import classNames from "classnames";
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const Chat = ApiCatalog.Categories.Chat;
+import { Catalog } from "electr-common";
+const Chat = Catalog.Categories.Chat;
 
 const styles = theme => ({
   root: {

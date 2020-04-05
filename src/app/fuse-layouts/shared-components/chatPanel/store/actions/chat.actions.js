@@ -1,7 +1,7 @@
 import axios from "axios";
 import { setselectedContactId } from "./contacts.actions";
 import { closeMobileChatsSidebar } from "app/main/apps/chat/store/actions/sidebars.actions";
-import { ApiCatalog } from "electr-common";
+import { Catalog } from "electr-common";
 
 export const GET_CHAT = "[CHAT PANEL] GET CHAT";
 export const REMOVE_CHAT = "[CHAT PANEL] REMOVE CHAT";
@@ -9,8 +9,9 @@ export const SEND_MESSAGE = "[CHAT PANEL] SEND MESSAGE";
 
 export function getChat(contactId) {
   return (dispatch, getState) => {
+    debugger;
     const { id: userId } = getState().chatPanel.user;
-    const request = axios.get(ApiCatalog.GET, {
+    const request = axios.get(Catalog.Categories.Chat.GET, {
       contactId,
       userId
     });
@@ -42,7 +43,7 @@ export function sendMessage(messageText, chatId, userId) {
     time: new Date()
   };
 
-  const request = axios.post(ApiCatalog.Categories.CHAT.POST_SEND_MESSAGE, {
+  const request = axios.post(Catalog.Categories.Chat.POST_SEND_MESSAGE, {
     chatId,
     message
   });

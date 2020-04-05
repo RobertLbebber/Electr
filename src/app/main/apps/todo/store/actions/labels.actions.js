@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const Todo = ApiCatalog.Categories.Todo;
+import { Catalog } from "electr-common";
+const Todo = Catalog.Categories.Todo;
 
 export const GET_LABELS = "[TODO APP] GET LABELS";
 

@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const Contacts = ApiCatalog.Categories.Contacts;
+import { Catalog } from "electr-common";
+const Contacts = Catalog.Categories.Contacts;
 
 export const GET_USER_DATA = "[CONTACTS APP] GET USER DATA";
 

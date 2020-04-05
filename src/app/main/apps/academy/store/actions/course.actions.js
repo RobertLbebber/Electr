@@ -1,8 +1,8 @@
 import axios from "axios";
 import { showMessage } from "app/store/actions/fuse";
 
-import { ApiCatalog } from "electr-common";
-const Acadamy = ApiCatalog.Categories.Academy;
+import { Catalog } from "electr-common";
+const Acadamy = Catalog.Categories.Academy;
 
 export const GET_COURSE = "[ACADEMY APP] GET COURSE";
 export const SAVE_COURSE = "[ACADEMY APP] SAVE COURSE";

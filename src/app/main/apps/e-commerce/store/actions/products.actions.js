@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const ECommerce = ApiCatalog.Categories.ECommerce;
+import { Catalog } from "electr-common";
+const ECommerce = Catalog.Categories.ECommerce;
 
 export const GET_PRODUCTS = "[E-COMMERCE APP] GET PRODUCTS";
 export const SET_PRODUCTS_SEARCH_TEXT =

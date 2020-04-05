@@ -10,8 +10,8 @@ import {
 } from "@material-ui/core";
 import { FuseAnimateGroup } from "@fuse";
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const Profile = ApiCatalog.Categories.Profile;
+import { Catalog } from "electr-common";
+const Profile = Catalog.Categories.Profile;
 
 class PhotosVideosTab extends Component {
   state = {

@@ -1,8 +1,8 @@
 import axios from "axios";
 import { setselectedContactId } from "./contacts.actions";
 import { closeMobileChatsSidebar } from "./sidebars.actions";
-import { ApiCatalog } from "electr-common";
-const Chat = ApiCatalog.Categories.Chat;
+import { Catalog } from "electr-common";
+const Chat = Catalog.Categories.Chat;
 
 export const GET_CHAT = "[CHAT APP] GET CHAT";
 export const REMOVE_CHAT = "[CHAT APP] REMOVE CHAT";

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { showMessage } from "app/store/actions/fuse";
-import { ApiCatalog } from "electr-common";
-const Scrumboard = ApiCatalog.Categories.Scrumboard;
+import { Catalog } from "electr-common";
+const Scrumboard = Catalog.Categories.Scrumboard;
 
 export const OPEN_CARD_DIALOG = "[SCRUMBOARD APP] OPEN CARD DIALOG";
 export const CLOSE_CARD_DIALOG = "[SCRUMBOARD APP] CLOSE CARD DIALOG";

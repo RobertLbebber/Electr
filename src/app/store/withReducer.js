@@ -14,8 +14,8 @@ const withReducer = (key, reducer) => WrappedComponent =>
         {
             return (
                 <ReactReduxContext.Consumer>
-                    {({store, storeState}) => {
-                        return storeState[key] ? <WrappedComponent {...this.props} /> : null;
+                    {({store}) => {
+                        return store.getState[key] ? <WrappedComponent {...this.props} /> : null;
                     }}
                 </ReactReduxContext.Consumer>
             );

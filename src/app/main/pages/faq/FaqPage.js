@@ -12,8 +12,8 @@ import {
 import { FuseUtils, FuseAnimate, FuseAnimateGroup } from "@fuse";
 import classNames from "classnames";
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const Faq = ApiCatalog.Categories.Faq;
+import { Catalog } from "electr-common";
+const Faq = Catalog.Categories.Faq;
 
 const styles = theme => ({
   header: {

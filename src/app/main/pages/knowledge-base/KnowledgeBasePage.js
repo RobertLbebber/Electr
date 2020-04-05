@@ -20,8 +20,8 @@ import {
 import { FuseAnimate, FuseAnimateGroup } from "@fuse";
 import classNames from "classnames";
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const KnowledgeBase = ApiCatalog.Categories.KnowledgeBase;
+import { Catalog } from "electr-common";
+const KnowledgeBase = Catalog.Categories.KnowledgeBase;
 
 function Transition(props) {
   return <Slide direction="up" {...props} />;

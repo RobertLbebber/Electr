@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const Academy = ApiCatalog.Categories.Academy;
+import { Catalog } from "electr-common";
+const Academy = Catalog.Categories.Academy;
 
 export const GET_COURSES = "[ACADEMY APP] GET COURSES";
 export const GET_CATEGORIES = "[ACADEMY APP] GET CATEGORIES";

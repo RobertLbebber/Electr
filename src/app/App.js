@@ -2,8 +2,8 @@ import '@fake-db'
 import React from 'react';
 import {createGenerateClassName, jssPreset} from '@material-ui/core';
 import {FuseAuthorization, FuseLayout, FuseTheme} from '@fuse';
-import JssProvider from 'react-jss/lib/JssProvider';
-import Provider from 'react-redux/es/components/Provider';
+import {JssProvider} from 'react-jss';
+import { Provider } from 'react-redux';
 import {Router} from 'react-router-dom';
 import {create} from 'jss';
 import jssExtend from 'jss-extend';

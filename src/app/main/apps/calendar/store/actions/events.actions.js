@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const Calendar = ApiCatalog.Categories.Calendar;
+import { Catalog } from "electr-common";
+const Calendar = Catalog.Categories.Calendar;
 
 export const GET_EVENTS = "[CALENDAR APP] GET EVENTS";
 export const OPEN_NEW_EVENT_DIALOG = "[CALENDAR APP] OPEN NEW EVENT DIALOG";

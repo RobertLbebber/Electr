@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getUserData } from "app/main/apps/contacts/store/actions/user.actions";
-import { ApiCatalog } from "electr-common";
-const Contact = ApiCatalog.Categories.Contact;
+import { Catalog } from "electr-common";
+const Contact = Catalog.Categories.Contact;
 
 export const GET_CONTACTS = "[CONTACTS APP] GET CONTACTS";
 export const SET_SEARCH_TEXT = "[CONTACTS APP] SET SEARCH TEXT";

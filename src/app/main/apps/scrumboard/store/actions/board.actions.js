@@ -7,8 +7,8 @@ import reorder, { reorderQuoteMap } from "./reorder";
 import * as Actions from "./index";
 import ListModel from "../../model/ListModel";
 import CardModel from "../../model/CardModel";
-import { ApiCatalog } from "electr-common";
-const Scrumboard = ApiCatalog.Categories.Scrumboard;
+import { Catalog } from "electr-common";
+const Scrumboard = Catalog.Categories.Scrumboard;
 
 export const GET_BOARD = "[SCRUMBOARD APP] GET BOARD";
 export const DELETE_BOARD = "[SCRUMBOARD APP] DELETE BOARD";

@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const Chat = ApiCatalog.Categories.Chat;
+import { Catalog } from "electr-common";
+const Chat = Catalog.Categories.Chat;
 
 export const GET_CONTACTS = "[CHAT PANEL] GET CONTACTS";
 export const SET_SELECTED_CONTACT_ID = "[CHAT PANEL] SET SELECTED CONTACT ID";

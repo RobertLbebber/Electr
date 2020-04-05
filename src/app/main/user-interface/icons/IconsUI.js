@@ -10,10 +10,10 @@ import {
 } from "@material-ui/core";
 import { FusePageSimple, FuseAnimate } from "@fuse";
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const Icons = ApiCatalog.Categories.Icons;
+import { Catalog } from "electr-common"; 
+const Icons = Catalog.Categories.Icons;
 
-class IconsUI extends Component {
+class IconsUI extends Component { 
   state = {
     data: [],
     searchText: ""
@@ -38,7 +38,7 @@ class IconsUI extends Component {
               return true;
             }
 
-            for (let tag of item.tags) {
+            for (let tag of item.tags) { 
               if (tag.includes(searchText)) {
                 return true;
               }

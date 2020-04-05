@@ -1,8 +1,8 @@
 import axios from "axios";
 import history from "history.js";
 import BoardModel from "../../model/BoardModel";
-import { ApiCatalog } from "electr-common";
-const Scrumboard = ApiCatalog.Categories.Scrumboard;
+import { Catalog } from "electr-common";
+const Scrumboard = Catalog.Categories.Scrumboard;
 
 export const GET_BOARDS = "[SCRUMBOARD APP] GET BOARDS";
 export const RESET_BOARDS = "[SCRUMBOARD APP] RESET BOARDS";

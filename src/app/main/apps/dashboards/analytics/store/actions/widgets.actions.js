@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiCatalog } from "electr-common";
-const AnalyticsDashboard = ApiCatalog.Categories.AnalyticsDashboard;
+import { Catalog } from "electr-common";
+const AnalyticsDashboard = Catalog.Categories.AnalyticsDashboard;
 
 export const GET_WIDGETS = "[ANALYTICS DASHBOARD APP] GET WIDGETS";
 
