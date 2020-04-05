@@ -1,3 +1,4 @@
+import React from "react";
 export const ThirdPartyComponentsRoutes = [
   {
     path: "/components/third-party/formsy",

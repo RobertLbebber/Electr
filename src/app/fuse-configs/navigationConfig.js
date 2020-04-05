@@ -1,6 +1,7 @@
 import { MaterialUINavigation } from "app/main/components/material-ui/MaterialUINavigation";
 import { authRoles } from "app/auth";
 import {
+  PAGE_LANDING_DONATE,
   PAGE_ELECTR_PRICING,
   PAGE_LANDING_AUTH_LOCK,
   PAGE_LANDING_AUTH_LOGIN,
@@ -11,7 +12,7 @@ import {
   PAGE_LANDING_AUTH_FORGOT_PASSWORD,
   PAGE_LANDING_AUTH_FORGOT_PASSWORD_2,
   PAGE_LANDING_AUTH_RESET_PASSWORD,
-  PAGE_LANDING_AUTH_RESET_PASSWORD_2
+  PAGE_LANDING_AUTH_RESET_PASSWORD_2,
 } from "./pageLocations";
 
 /**
@@ -40,15 +41,15 @@ const navigationConfig = [
             id: "analytics-dashboard",
             title: "Market Trends",
             type: "item",
-            url: "/apps/dashboards/analytics"
+            url: "/apps/dashboards/analytics",
           },
           {
             id: "project-dashboard",
             title: "Operations",
             type: "item",
-            url: "/apps/dashboards/project"
-          }
-        ]
+            url: "/apps/dashboards/project",
+          },
+        ],
       },
       {
         id: "calendar",
@@ -56,7 +57,7 @@ const navigationConfig = [
         auth: authRoles.electr,
         type: "item",
         icon: "today",
-        url: "/apps/calendar"
+        url: "/apps/calendar",
       },
       {
         id: "e-commerce",
@@ -71,7 +72,7 @@ const navigationConfig = [
             title: "Products",
             type: "item",
             url: "/apps/e-commerce/products",
-            exact: true
+            exact: true,
           },
           {
             id: "e-commerce-product-detail",
@@ -79,30 +80,30 @@ const navigationConfig = [
             type: "item",
             url:
               "/apps/e-commerce/products/1/a-walk-amongst-friends-canvas-print",
-            exact: true
+            exact: true,
           },
           {
             id: "e-commerce-new-product",
             title: "New Product",
             type: "item",
             url: "/apps/e-commerce/products/new",
-            exact: true
+            exact: true,
           },
           {
             id: "e-commerce-orders",
             title: "Orders",
             type: "item",
             url: "/apps/e-commerce/orders",
-            exact: true
+            exact: true,
           },
           {
             id: "e-commerce-order-detail",
             title: "Order Detail",
             type: "item",
             url: "/apps/e-commerce/orders/1",
-            exact: true
-          }
-        ]
+            exact: true,
+          },
+        ],
       },
       {
         id: "academy",
@@ -110,7 +111,7 @@ const navigationConfig = [
         auth: authRoles.staff,
         type: "item",
         icon: "school",
-        url: "/apps/academy"
+        url: "/apps/academy",
       },
       {
         id: "mail",
@@ -118,7 +119,7 @@ const navigationConfig = [
         auth: authRoles.user,
         type: "item",
         icon: "email",
-        url: "/apps/mail"
+        url: "/apps/mail",
       },
       {
         id: "todo",
@@ -126,7 +127,7 @@ const navigationConfig = [
         auth: authRoles.electr,
         type: "item",
         icon: "check_box",
-        url: "/apps/todo"
+        url: "/apps/todo",
       },
       {
         id: "file-manager",
@@ -134,7 +135,7 @@ const navigationConfig = [
         auth: authRoles.electr,
         type: "item",
         icon: "folder",
-        url: "/apps/file-manager"
+        url: "/apps/file-manager",
       },
       {
         id: "contacts",
@@ -142,7 +143,7 @@ const navigationConfig = [
         auth: authRoles.user,
         type: "item",
         icon: "account_box",
-        url: "/apps/contacts/all"
+        url: "/apps/contacts/all",
       },
       {
         id: "chat",
@@ -150,7 +151,7 @@ const navigationConfig = [
         auth: authRoles.user,
         type: "item",
         icon: "chat",
-        url: "/apps/chat"
+        url: "/apps/chat",
       },
       {
         id: "scrumboard",
@@ -158,7 +159,7 @@ const navigationConfig = [
         auth: authRoles.staff,
         type: "item",
         icon: "assessment",
-        url: "/apps/scrumboard"
+        url: "/apps/scrumboard",
       },
       {
         id: "notes",
@@ -166,9 +167,9 @@ const navigationConfig = [
         auth: authRoles.staff,
         type: "item",
         icon: "note",
-        url: "/apps/notes"
-      }
-    ]
+        url: "/apps/notes",
+      },
+    ],
   },
   {
     id: "pages",
@@ -187,63 +188,63 @@ const navigationConfig = [
             id: "authentication-login",
             title: "Login",
             type: "item",
-            url: PAGE_LANDING_AUTH_LOGIN
+            url: PAGE_LANDING_AUTH_LOGIN,
           },
           {
             id: "login-v2",
             title: "Login v2",
             type: "item",
-            url: PAGE_LANDING_AUTH_LOGIN_2
+            url: PAGE_LANDING_AUTH_LOGIN_2,
           },
           {
             id: "authentication-register",
             title: "Register",
             type: "item",
-            url: PAGE_LANDING_AUTH_REGISTER
+            url: PAGE_LANDING_AUTH_REGISTER,
           },
           {
             id: "authentication-register-v2",
             title: "Register v2",
             type: "item",
-            url: PAGE_LANDING_AUTH_REGISTER_2
+            url: PAGE_LANDING_AUTH_REGISTER_2,
           },
           {
             id: "authentication-forgot-password",
             title: "Forgot Password",
             type: "item",
-            url: PAGE_LANDING_AUTH_FORGOT_PASSWORD
+            url: PAGE_LANDING_AUTH_FORGOT_PASSWORD,
           },
           {
             id: "authentication-forgot-password-v2",
             title: "Forgot Password v2",
             type: "item",
-            url: PAGE_LANDING_AUTH_FORGOT_PASSWORD_2
+            url: PAGE_LANDING_AUTH_FORGOT_PASSWORD_2,
           },
           {
             id: "authentication-reset-password",
             title: "Reset Password",
             type: "item",
-            url: PAGE_LANDING_AUTH_RESET_PASSWORD
+            url: PAGE_LANDING_AUTH_RESET_PASSWORD,
           },
           {
             id: "authentication-reset-password-v2",
             title: "Reset Password v2",
             type: "item",
-            url: PAGE_LANDING_AUTH_RESET_PASSWORD_2
+            url: PAGE_LANDING_AUTH_RESET_PASSWORD_2,
           },
           {
             id: "authentication-lock-screen",
             title: "Lock Screen",
             type: "item",
-            url: PAGE_LANDING_AUTH_LOCK
+            url: PAGE_LANDING_AUTH_LOCK,
           },
           {
             id: "authentication-mail-confirmation",
             title: "Mail Confirmation",
             type: "item",
-            url: PAGE_LANDING_AUTH_MAILING
-          }
-        ]
+            url: PAGE_LANDING_AUTH_MAILING,
+          },
+        ],
       },
       {
         id: "coming-soon",
@@ -251,7 +252,7 @@ const navigationConfig = [
         auth: authRoles.electr,
         type: "item",
         icon: "alarm",
-        url: "/pages/coming-soon"
+        url: "/pages/coming-soon",
       },
       {
         id: "errors",
@@ -264,15 +265,15 @@ const navigationConfig = [
             id: "404",
             title: "404",
             type: "item",
-            url: "/pages/errors/error-404"
+            url: "/pages/errors/error-404",
           },
           {
             id: "500",
             title: "500",
             type: "item",
-            url: "/pages/errors/error-500"
-          }
-        ]
+            url: "/pages/errors/error-500",
+          },
+        ],
       },
       {
         id: "invoice",
@@ -285,15 +286,15 @@ const navigationConfig = [
             id: "modern",
             title: "Modern",
             type: "item",
-            url: "/pages/invoices/modern"
+            url: "/pages/invoices/modern",
           },
           {
             id: "compact",
             title: "Compact",
             type: "item",
-            url: "/pages/invoices/compact"
-          }
-        ]
+            url: "/pages/invoices/compact",
+          },
+        ],
       },
       {
         id: "maintenance",
@@ -301,7 +302,7 @@ const navigationConfig = [
         auth: authRoles.staff,
         type: "item",
         icon: "build",
-        url: "/pages/maintenance"
+        url: "/pages/maintenance",
       },
       {
         id: "pricing",
@@ -311,18 +312,24 @@ const navigationConfig = [
         children: [
           {
             id: "style-2",
-            title: "Style 2",
+            title: "Planning Options",
             type: "item",
-            url: PAGE_ELECTR_PRICING
-          }
-        ]
+            url: PAGE_ELECTR_PRICING,
+          },
+          {
+            id: "donate",
+            title: "Donate",
+            type: "item",
+            url: PAGE_LANDING_DONATE,
+          },
+        ],
       },
       {
         id: "profile",
         title: "Profile",
         type: "item",
         icon: "person",
-        url: "/pages/profile"
+        url: "/pages/profile",
       },
       {
         id: "search",
@@ -334,31 +341,31 @@ const navigationConfig = [
             id: "classic-search",
             title: "Classic Search",
             type: "item",
-            url: "/pages/search/classic"
+            url: "/pages/search/classic",
           },
           {
             id: "modern-search",
             title: "Modern Search",
             type: "item",
-            url: "/pages/search/modern"
-          }
-        ]
+            url: "/pages/search/modern",
+          },
+        ],
       },
       {
         id: "faq",
         title: "Faq",
         type: "item",
         icon: "help",
-        url: "/pages/faq"
+        url: "/pages/faq",
       },
       {
         id: "knowledge-base",
         title: "Knowledge Base",
         type: "item",
         icon: "import_contacts",
-        url: "/pages/knowledge-base"
-      }
-    ]
+        url: "/pages/knowledge-base",
+      },
+    ],
   },
   {
     id: "user-interface",
@@ -372,21 +379,21 @@ const navigationConfig = [
         title: "Icons",
         type: "item",
         icon: "photo",
-        url: "/ui/icons"
+        url: "/ui/icons",
       },
       {
         id: "typography",
         title: "Typography",
         type: "item",
         icon: "text_fields",
-        url: "/ui/typography"
+        url: "/ui/typography",
       },
       {
         id: "helper-classes",
         title: "Helper Classes",
         type: "item",
         icon: "help",
-        url: "/ui/helper-classes"
+        url: "/ui/helper-classes",
       },
       {
         id: "page-layouts",
@@ -403,75 +410,75 @@ const navigationConfig = [
                 id: "carded-full-width",
                 title: "Full Width",
                 type: "item",
-                url: "/ui/page-layouts/carded/full-width"
+                url: "/ui/page-layouts/carded/full-width",
               },
               {
                 id: "carded-full-width-tabbed",
                 title: "Full Width Tabbed",
                 type: "item",
-                url: "/ui/page-layouts/carded/full-width-tabbed"
+                url: "/ui/page-layouts/carded/full-width-tabbed",
               },
               {
                 id: "carded-full-width-2",
                 title: "Full Width 2",
                 type: "item",
-                url: "/ui/page-layouts/carded/full-width-2"
+                url: "/ui/page-layouts/carded/full-width-2",
               },
               {
                 id: "carded-full-width-2-tabbed",
                 title: "Full Width 2 Tabbed",
                 type: "item",
-                url: "/ui/page-layouts/carded/full-width-2-tabbed"
+                url: "/ui/page-layouts/carded/full-width-2-tabbed",
               },
               {
                 id: "carded-left-sidebar",
                 title: "Left Sidebar",
                 type: "item",
-                url: "/ui/page-layouts/carded/left-sidebar"
+                url: "/ui/page-layouts/carded/left-sidebar",
               },
               {
                 id: "carded-left-sidebar-tabbed",
                 title: "Left Sidebar Tabbed",
                 type: "item",
-                url: "/ui/page-layouts/carded/left-sidebar-tabbed"
+                url: "/ui/page-layouts/carded/left-sidebar-tabbed",
               },
               {
                 id: "carded-left-sidebar-2",
                 title: "Left Sidebar 2",
                 type: "item",
-                url: "/ui/page-layouts/carded/left-sidebar-2"
+                url: "/ui/page-layouts/carded/left-sidebar-2",
               },
               {
                 id: "carded-left-sidebar-2-tabbed",
                 title: "Left Sidebar 2 Tabbed",
                 type: "item",
-                url: "/ui/page-layouts/carded/left-sidebar-2-tabbed"
+                url: "/ui/page-layouts/carded/left-sidebar-2-tabbed",
               },
               {
                 id: "carded-right-sidebar",
                 title: "Right Sidebar",
                 type: "item",
-                url: "/ui/page-layouts/carded/right-sidebar"
+                url: "/ui/page-layouts/carded/right-sidebar",
               },
               {
                 id: "carded-right-sidebar-tabbed",
                 title: "Right Sidebar Tabbed",
                 type: "item",
-                url: "/ui/page-layouts/carded/right-sidebar-tabbed"
+                url: "/ui/page-layouts/carded/right-sidebar-tabbed",
               },
               {
                 id: "carded-right-sidebar-2",
                 title: "Right Sidebar 2",
                 type: "item",
-                url: "/ui/page-layouts/carded/right-sidebar-2"
+                url: "/ui/page-layouts/carded/right-sidebar-2",
               },
               {
                 id: "carded-right-sidebar-2-tabbed",
                 title: "Right Sidebar 2 Tabbed",
                 type: "item",
-                url: "/ui/page-layouts/carded/right-sidebar-2-tabbed"
-              }
-            ]
+                url: "/ui/page-layouts/carded/right-sidebar-2-tabbed",
+              },
+            ],
           },
           {
             id: "simple",
@@ -482,61 +489,61 @@ const navigationConfig = [
                 id: "simple-full-width",
                 title: "Full Width",
                 type: "item",
-                url: "/ui/page-layouts/simple/full-width"
+                url: "/ui/page-layouts/simple/full-width",
               },
               {
                 id: "simple-left-sidebar",
                 title: "Left Sidebar",
                 type: "item",
-                url: "/ui/page-layouts/simple/left-sidebar"
+                url: "/ui/page-layouts/simple/left-sidebar",
               },
               {
                 id: "simple-left-sidebar-2",
                 title: "Left Sidebar 2",
                 type: "item",
-                url: "/ui/page-layouts/simple/left-sidebar-2"
+                url: "/ui/page-layouts/simple/left-sidebar-2",
               },
               {
                 id: "simple-left-sidebar-3",
                 title: "Left Sidebar 3",
                 type: "item",
-                url: "/ui/page-layouts/simple/left-sidebar-3"
+                url: "/ui/page-layouts/simple/left-sidebar-3",
               },
               {
                 id: "simple-right-sidebar",
                 title: "Right Sidebar",
                 type: "item",
-                url: "/ui/page-layouts/simple/right-sidebar"
+                url: "/ui/page-layouts/simple/right-sidebar",
               },
               {
                 id: "simple-right-sidebar-2",
                 title: "Right Sidebar 2",
                 type: "item",
-                url: "/ui/page-layouts/simple/right-sidebar-2"
+                url: "/ui/page-layouts/simple/right-sidebar-2",
               },
               {
                 id: "simple-right-sidebar-3",
                 title: "Right Sidebar 3",
                 type: "item",
-                url: "/ui/page-layouts/simple/right-sidebar-3"
+                url: "/ui/page-layouts/simple/right-sidebar-3",
               },
               {
                 id: "simple-tabbed",
                 title: "Tabbed",
                 type: "item",
-                url: "/ui/page-layouts/simple/tabbed"
-              }
-            ]
+                url: "/ui/page-layouts/simple/tabbed",
+              },
+            ],
           },
           {
             id: "blank",
             title: "Blank",
             type: "item",
-            url: "/ui/page-layouts/blank"
-          }
-        ]
-      }
-    ]
+            url: "/ui/page-layouts/blank",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "components",
@@ -550,7 +557,7 @@ const navigationConfig = [
         title: "Material UI Elements",
         type: "collapse",
         icon: "layers",
-        children: [...MaterialUINavigation]
+        children: [...MaterialUINavigation],
       },
       {
         id: "fuse-components",
@@ -562,19 +569,19 @@ const navigationConfig = [
             id: "fuse-auth",
             title: "FuseAuthorization",
             type: "item",
-            url: "/components/fuse/fuse-authorization"
+            url: "/components/fuse/fuse-authorization",
           },
           {
             id: "fuse-theme",
             title: "FuseTheme",
             type: "item",
-            url: "/components/fuse/fuse-theme"
+            url: "/components/fuse/fuse-theme",
           },
           {
             id: "fuse-layout",
             title: "FuseLayout",
             type: "item",
-            url: "/components/fuse/fuse-layout"
+            url: "/components/fuse/fuse-layout",
           },
           {
             id: "fuse-page",
@@ -585,71 +592,71 @@ const navigationConfig = [
                 id: "fuse-page-carded",
                 title: "FusePageCarded",
                 type: "item",
-                url: "/components/fuse/fuse-page-carded"
+                url: "/components/fuse/fuse-page-carded",
               },
               {
                 id: "fuse-page-simple",
                 title: "FusePageSimple",
                 type: "item",
-                url: "/components/fuse/fuse-page-simple"
-              }
-            ]
+                url: "/components/fuse/fuse-page-simple",
+              },
+            ],
           },
           {
             id: "fuse-navigation",
             title: "FuseNavigation",
             type: "item",
-            url: "/components/fuse/fuse-navigation"
+            url: "/components/fuse/fuse-navigation",
           },
           {
             id: "fuse-scrollbars",
             title: "FuseScrollbars",
             type: "item",
-            url: "/components/fuse/fuse-scrollbars"
+            url: "/components/fuse/fuse-scrollbars",
           },
           {
             id: "fuse-highlight",
             title: "FuseHighlight",
             type: "item",
-            url: "/components/fuse/fuse-highlight"
+            url: "/components/fuse/fuse-highlight",
           },
           {
             id: "fuse-countdown",
             title: "FuseCountdown",
             type: "item",
-            url: "/components/fuse/fuse-countdown"
+            url: "/components/fuse/fuse-countdown",
           },
           {
             id: "fuse-message",
             title: "FuseMessage",
             type: "item",
-            url: "/components/fuse/fuse-message"
+            url: "/components/fuse/fuse-message",
           },
           {
             id: "fuse-dialog",
             title: "FuseDialog",
             type: "item",
-            url: "/components/fuse/fuse-dialog"
+            url: "/components/fuse/fuse-dialog",
           },
           {
             id: "fuse-animate",
             title: "FuseAnimate",
             type: "item",
-            url: "/components/fuse/fuse-animate"
+            url: "/components/fuse/fuse-animate",
           },
           {
             id: "fuse-animate-group",
             title: "FuseAnimateGroup",
             type: "item",
-            url: "/components/fuse/fuse-animate-group"
+            url: "/components/fuse/fuse-animate-group",
           },
           {
             id: "fuse-chip-select",
             title: "FuseChipSelect",
             type: "item",
-            url: "/components/fuse/fuse-chip-select"
-          }
-        ]
+            url: "/components/fuse/fuse-chip-select",
+          },
+        ],
       },
       {
         id: "3rd-party-components",
@@ -666,31 +673,31 @@ const navigationConfig = [
                 id: "react-table",
                 title: "React Table",
                 type: "item",
-                url: "/components/third-party/datatables/react-table"
-              }
-            ]
+                url: "/components/third-party/datatables/react-table",
+              },
+            ],
           },
           {
             id: "formsy",
             title: "Formsy",
             type: "item",
-            url: "/components/third-party/formsy"
+            url: "/components/third-party/formsy",
           },
           {
             id: "google-map-react",
             title: "Google Map React",
             type: "item",
-            url: "/components/third-party/google-map-react"
+            url: "/components/third-party/google-map-react",
           },
           {
             id: "react-chartjs-2",
             title: "React ChartJs 2",
             type: "item",
-            url: "/components/third-party/react-chartjs-2"
-          }
-        ]
-      }
-    ]
+            url: "/components/third-party/react-chartjs-2",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "Documentation",
@@ -704,7 +711,7 @@ const navigationConfig = [
         title: "Changelog",
         type: "item",
         icon: "history",
-        url: "/documentation/changelog"
+        url: "/documentation/changelog",
       },
       {
         id: "getting-started-doc",
@@ -716,15 +723,15 @@ const navigationConfig = [
             id: "introduction-doc",
             title: "Introduction",
             type: "item",
-            url: "/documentation/getting-started/introduction"
+            url: "/documentation/getting-started/introduction",
           },
           {
             id: "installation-doc",
             title: "Installation",
             type: "item",
-            url: "/documentation/getting-started/installation"
-          }
-        ]
+            url: "/documentation/getting-started/installation",
+          },
+        ],
       },
       {
         id: "working-with-fuse-react-doc",
@@ -736,63 +743,63 @@ const navigationConfig = [
             id: "development-doc",
             title: "Development",
             type: "item",
-            url: "/documentation/working-with-fuse-react/development"
+            url: "/documentation/working-with-fuse-react/development",
           },
           {
             id: "production-doc",
             title: "Production",
             type: "item",
-            url: "/documentation/working-with-fuse-react/production"
+            url: "/documentation/working-with-fuse-react/production",
           },
           {
             id: "project-structure-doc",
             title: "Project Structure",
             type: "item",
-            url: "/documentation/working-with-fuse-react/project-structure"
+            url: "/documentation/working-with-fuse-react/project-structure",
           },
           {
             id: "updating-fuse-react-doc",
             title: "Updating Fuse React",
             type: "item",
-            url: "/documentation/working-with-fuse-react/updating-fuse-react"
+            url: "/documentation/working-with-fuse-react/updating-fuse-react",
           },
           {
             id: "theming-doc",
             title: "Theming",
             type: "item",
-            url: "/documentation/working-with-fuse-react/theming"
+            url: "/documentation/working-with-fuse-react/theming",
           },
           {
             id: "theme-layouts-doc",
             title: "Theme Layouts",
             type: "item",
-            url: "/documentation/working-with-fuse-react/theme-layouts"
+            url: "/documentation/working-with-fuse-react/theme-layouts",
           },
           {
             id: "page-layouts-doc",
             title: "Page Layouts",
             type: "item",
-            url: "/documentation/working-with-fuse-react/page-layouts"
+            url: "/documentation/working-with-fuse-react/page-layouts",
           },
           {
             id: "settings-doc",
             title: "Settings",
             type: "item",
-            url: "/documentation/working-with-fuse-react/settings"
+            url: "/documentation/working-with-fuse-react/settings",
           },
           {
             id: "fuse-react-routing-doc",
             title: "Routing",
             type: "item",
-            url: "/documentation/working-with-fuse-react/routing"
+            url: "/documentation/working-with-fuse-react/routing",
           },
           {
             id: "fuse-react-code-splitting-doc",
             title: "Code Splitting",
             type: "item",
-            url: "/documentation/working-with-fuse-react/code-splitting"
-          }
-        ]
+            url: "/documentation/working-with-fuse-react/code-splitting",
+          },
+        ],
       },
       {
         id: "authentication-doc",
@@ -804,27 +811,27 @@ const navigationConfig = [
             id: "jwt-auth-doc",
             title: "JWT",
             type: "item",
-            url: "/documentation/authentication/jwt"
+            url: "/documentation/authentication/jwt",
           },
           {
             id: "firebase-auth-doc",
             title: "Firebase",
             type: "item",
-            url: "/documentation/authentication/firebase"
+            url: "/documentation/authentication/firebase",
           },
           {
             id: "auth0-auth-doc",
             title: "Auth0",
             type: "item",
-            url: "/documentation/authentication/auth0"
-          }
-        ]
-      }
-    ]
+            url: "/documentation/authentication/auth0",
+          },
+        ],
+      },
+    ],
   },
   {
     type: "divider",
-    id: "divider-1"
+    id: "divider-1",
   },
   {
     id: "auth",
@@ -839,7 +846,7 @@ const navigationConfig = [
         type: "item",
         url: "/login",
         auth: authRoles.onlyGuest,
-        icon: "lock"
+        icon: "lock",
       },
       {
         id: "register",
@@ -847,7 +854,7 @@ const navigationConfig = [
         type: "item",
         url: "/register",
         auth: authRoles.onlyGuest,
-        icon: "person_add"
+        icon: "person_add",
       },
       {
         id: "logout",
@@ -855,14 +862,14 @@ const navigationConfig = [
         type: "item",
         auth: authRoles.user,
         url: "/logout",
-        icon: "exit_to_app"
+        icon: "exit_to_app",
       },
       {
         id: "auth-admin-example",
         title: "Admin: Auth protected page",
         type: "item",
         url: "/auth/admin-role-example",
-        icon: "security"
+        icon: "security",
       },
       {
         id: "only-admin-navigation-item",
@@ -870,14 +877,14 @@ const navigationConfig = [
         type: "item",
         auth: authRoles.admin,
         url: "/auth/admin-role-example",
-        icon: "verified_user"
+        icon: "verified_user",
       },
       {
         id: "auth-staff-example",
         title: "Staff: Auth protected page",
         type: "item",
         url: "/auth/staff-role-example",
-        icon: "security"
+        icon: "security",
       },
       {
         id: "only-staff-navigation-item",
@@ -885,14 +892,14 @@ const navigationConfig = [
         type: "item",
         auth: authRoles.staff,
         url: "/auth/staff-role-example",
-        icon: "verified_user"
+        icon: "verified_user",
       },
       {
         id: "auth-guest-example",
         title: "Guest: Auth protected page",
         type: "item",
         url: "/auth/guest-role-example",
-        icon: "security"
+        icon: "security",
       },
       {
         id: "only-guest-navigation-item",
@@ -900,13 +907,13 @@ const navigationConfig = [
         type: "item",
         auth: authRoles.onlyGuest,
         url: "/auth/guest-role-example",
-        icon: "verified_user"
-      }
-    ]
+        icon: "verified_user",
+      },
+    ],
   },
   {
     type: "divider",
-    id: "divider-2"
+    id: "divider-2",
   },
   {
     id: "test-group-level-1",
@@ -920,7 +927,7 @@ const navigationConfig = [
         title: "Test Item",
         type: "item",
         icon: "list",
-        url: "#"
+        url: "#",
       },
       {
         id: "test-link",
@@ -928,7 +935,7 @@ const navigationConfig = [
         type: "link",
         icon: "link",
         url: "http://fusetheme.com",
-        target: "_blank"
+        target: "_blank",
       },
       {
         id: "test-collapse-level-1",
@@ -940,14 +947,14 @@ const navigationConfig = [
             id: "test-item-level-1",
             title: "Test Item Level 1",
             type: "item",
-            url: "#"
+            url: "#",
           },
           {
             id: "test-link-level-1",
             title: "Test Link Level 1",
             type: "link",
             url: "http://fusetheme.com",
-            target: "_blank"
+            target: "_blank",
           },
           {
             id: "test-collapse-2",
@@ -958,14 +965,14 @@ const navigationConfig = [
                 id: "test-item-level-2",
                 title: "Test Item Level 2",
                 type: "item",
-                url: "#"
+                url: "#",
               },
               {
                 id: "test-link-level-2",
                 title: "Test Link Level 2",
                 type: "link",
                 url: "http://fusetheme.com",
-                target: "_blank"
+                target: "_blank",
               },
               {
                 id: "test-collapse-level-3",
@@ -976,14 +983,14 @@ const navigationConfig = [
                     id: "test-item-level-3",
                     title: "Test Item Level 3",
                     type: "item",
-                    url: "#"
+                    url: "#",
                   },
                   {
                     id: "test-link-level-3",
                     title: "Test Link Level 3",
                     type: "link",
                     url: "http://fusetheme.com",
-                    target: "_blank"
+                    target: "_blank",
                   },
                   {
                     id: "test-collapse-level-4",
@@ -994,13 +1001,13 @@ const navigationConfig = [
                         id: "test-item-level-4",
                         title: "Test Item Level 4",
                         type: "item",
-                        url: "#"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+                        url: "#",
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
           },
           {
             id: "test-group-level-2",
@@ -1017,23 +1024,23 @@ const navigationConfig = [
                     id: "test-item-level-2-2",
                     title: "Test Item Level 2",
                     type: "item",
-                    url: "#"
+                    url: "#",
                   },
                   {
                     id: "test-link-level-2-2",
                     title: "Test Link Level 2",
                     type: "link",
                     url: "http://fusetheme.com",
-                    target: "_blank"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+                    target: "_blank",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export default navigationConfig;

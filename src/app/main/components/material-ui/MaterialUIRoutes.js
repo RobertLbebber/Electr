@@ -1,4 +1,4 @@
-import { FuseLoadable } from "@fuse";
+import React from "react";
 
 export const MaterialUIRoutes = [
   {

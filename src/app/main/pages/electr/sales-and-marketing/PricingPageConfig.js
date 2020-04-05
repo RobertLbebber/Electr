@@ -1,3 +1,4 @@
+import React from "react";
 import { PAGE_ELECTR_PRICING } from "app/fuse-configs/pageLocations";
 
 export const PricingPageConfig = {

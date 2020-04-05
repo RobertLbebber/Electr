@@ -1,3 +1,4 @@
+import React from "react";
 export const WorkingWithFuseReactDocRoutes = [
   {
     path: "/documentation/working-with-fuse-react/development",

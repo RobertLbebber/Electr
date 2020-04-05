@@ -1,3 +1,4 @@
+import React from "react";
 export const simpleLayoutRoutes = [
   {
     path: "/ui/page-layouts/simple/full-width",

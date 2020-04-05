@@ -1,3 +1,4 @@
+import React from "react";
 import { PAGE_LANDING_AUTH_MAILING } from "app/fuse-configs/pageLocations";
 
 export const MailConfirmPageConfig = {

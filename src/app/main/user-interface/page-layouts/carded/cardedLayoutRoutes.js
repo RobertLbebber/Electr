@@ -1,3 +1,4 @@
+import React from "react";
 export const cardedLayoutRoutes = [
   {
     path: "/ui/page-layouts/carded/full-width",

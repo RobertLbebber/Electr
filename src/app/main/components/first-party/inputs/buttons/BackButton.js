@@ -11,7 +11,7 @@ class BackButton extends Component {
     return (
       <Fab onClick={window.history.back} className={this._tag} {...this.props}>
         {/* {locale} */}
-        Back
+        <b>X</b>
       </Fab>
     );
   }

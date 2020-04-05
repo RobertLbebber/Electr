@@ -1,3 +1,4 @@
+import React from "react";
 import { AuthenticationDocRoutes } from "./authentication/AuthenticationDocRoutes";
 import { GettingStartedDocRoutes } from "./getting-started/GettingStartedDocRoutes";
 import { WorkingWithFuseReactDocRoutes } from "./working-with-fuse-react/WorkingWithFuseReactDocRoutes";

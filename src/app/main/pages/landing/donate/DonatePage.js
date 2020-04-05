@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import QRCode from "qrcode.react";
 import {
   ButtonGroup,
-  Container,
+  Card,
+  CardContent,
+  Grow,
   FormControlLabel,
   Grid,
   RadioGroup,
@@ -10,27 +12,38 @@ import {
   TextField,
   Typography,
   withStyles,
-  Button
+  Button,
 } from "@material-ui/core";
 import PropTypes from "prop-types";
 import _ from "lodash";
+import { darken } from "@material-ui/core/styles/colorManipulator";
+import classNames from "classnames";
 
 import BackButton from "app/main/components/first-party/inputs/buttons/BackButton";
 // import LocaleContext from "Context/LocaleContext";
 
 //import Restful from "util/io/Restful"
 
-const style = theme => ({
+const styles = (theme) => ({
+  root: {
+    background:
+      "radial-gradient(" +
+      theme.palette.primary.light +
+      " 0%, " +
+      theme.palette.primary.dark +
+      " 80%)",
+    color: theme.palette.primary.contrastText,
+  },
   hundo: { height: "100%", width: "100%" },
   qrcode: { display: "block", margin: "auto" },
-  radio: { display: "grid", width: "300px", margin: "auto" }
+  radio: { display: "grid", width: "300px", margin: "auto" },
 });
 
 const STEP = {
   SETUP: 1,
   FORM: 2,
   PREVIEW: 3,
-  DONE: 4
+  DONE: 4,
 };
 
 class DonatePage extends Component {
@@ -38,11 +51,12 @@ class DonatePage extends Component {
     super(props);
     this._tag = this.constructor.name;
     this.canSubmit = this.canSubmit.bind(this);
+    this.renderStepSetup = this.renderStepSetup.bind(this);
     this.state = {
       valueIndex: 0,
       value: null,
       customValue: 125,
-      step: STEP.SETUP
+      step: STEP.SETUP,
     };
   }
 
@@ -57,7 +71,7 @@ class DonatePage extends Component {
     let { rangeGroups, unit, maxCurrency } = {
       rangeGroups: [1, 10, 25, 50],
       unit: "$",
-      maxCurrency: 2000
+      maxCurrency: 2000,
     };
     //  language.getCurrency();
     // <LocaleContext.Consumer>
@@ -67,7 +81,7 @@ class DonatePage extends Component {
       <RadioGroup
         className={radio}
         value={this.state.value}
-        onClick={e => {
+        onClick={(e) => {
           this.setState({ value: e.target.value });
         }}
       >
@@ -100,11 +114,11 @@ class DonatePage extends Component {
                   this.state.customValue < 0
                 }
                 type="number"
-                onChange={e =>
+                onChange={(e) =>
                   this.setState({
                     valueIndex: 6,
                     value: e.target.value,
-                    customValue: e.target.value
+                    customValue: e.target.value,
                   })
                 }
               />
@@ -160,7 +174,9 @@ class DonatePage extends Component {
                 onClick={() => {
                   this.setState({ step: STEP.FORM });
                 }}
-              />
+              >
+                Next
+              </Button>
             </ButtonGroup>
           </Grid>
         </Grid>
@@ -176,8 +192,9 @@ class DonatePage extends Component {
   renderStepDone(classes) {}
 
   render() {
+    let { classes } = this.props;
     let renderStep;
-    switch (this.state.state) {
+    switch (this.state.step) {
       case STEP.SETUP:
         renderStep = this.renderStepSetup;
         break;
@@ -190,14 +207,26 @@ class DonatePage extends Component {
       case STEP.DONE:
         renderStep = this.renderStepDone;
         break;
+      default:
+        console.error("Invalid Step: " + this.state.step);
+        renderStep = () => {};
     }
     return (
-      <div className={this._tag + " " + this.props.classes.hundo}>
-        <Container>
-          <Grid container className={this.props.classes.hundo}>
-            {renderStep(this.props.classes)}
-          </Grid>
-        </Container>
+      <div
+        className={classNames(
+          classes.root,
+          "flex flex-col flex-auto flex-no-shrink items-center justify-center p-32"
+        )}
+      >
+        <div className="flex flex-col items-center justify-center w-full">
+          <Grow in={true}>
+            <Card className="w-full max-w-384">
+              <CardContent className="flex flex-col items-center justify-center text-center p-48">
+                {renderStep(classes)}
+              </CardContent>
+            </Card>
+          </Grow>
+        </div>
       </div>
     );
   }
@@ -205,9 +234,9 @@ class DonatePage extends Component {
 
 DonatePage.propTypes = {
   classes: PropTypes.object,
-  qrLocation: PropTypes.string
+  qrLocation: PropTypes.string,
 };
 
 DonatePage.defaultProps = {};
 
-export default withStyles(style)(DonatePage);
+export default withStyles(styles)(DonatePage);

@@ -1,3 +1,4 @@
+import React from "react";
 import { PAGE_LANDING_AUTH_LOGIN_2 } from "app/fuse-configs/pageLocations";
 
 export const Login2PageConfig = {

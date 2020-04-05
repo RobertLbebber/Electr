@@ -12,7 +12,7 @@ const authRoles = {
    * @example [electr_admin,electr_manager, electr_staff]
    * @example [electee_group_admin,electee_group_manager, electee_group_staff]
    */
-  onlyGuest: ["admin", "staff", "guest"]
+  onlyGuest: ["admin", "staff", "guest"],
 };
 
 export default authRoles;

@@ -12,7 +12,7 @@ import SettingsPanel from "app/fuse-layouts/shared-components/SettingsPanel";
 import classNames from "classnames";
 import AppContext from "app/AppContext";
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     position: "relative",
     display: "flex",
@@ -25,28 +25,28 @@ const styles = theme => ({
     "&.boxed": {
       maxWidth: 1280,
       margin: "0 auto",
-      boxShadow: theme.shadows[3]
+      boxShadow: theme.shadows[3],
     },
     "&.scroll-body": {
       "& $wrapper": {
         height: "auto",
         flex: "0 0 auto",
-        overflow: "auto"
+        overflow: "auto",
       },
       "& $contentWrapper": {},
-      "& $content": {}
+      "& $content": {},
     },
     "&.scroll-content": {
       "& $wrapper": {},
       "& $contentWrapper": {},
-      "& $content": {}
-    }
+      "& $content": {},
+    },
   },
   wrapper: {
     display: "flex",
     position: "relative",
     width: "100%",
-    height: "100%"
+    height: "100%",
   },
   contentWrapper: {
     display: "flex",
@@ -54,7 +54,7 @@ const styles = theme => ({
     position: "relative",
     zIndex: 3,
     overflow: "hidden",
-    flex: "1 1 auto"
+    flex: "1 1 auto",
   },
   content: {
     position: "relative",
@@ -64,8 +64,8 @@ const styles = theme => ({
     flexDirection: "column",
     width: "100%",
     "-webkit-overflow-scrolling": "touch",
-    zIndex: 2
-  }
+    zIndex: 2,
+  },
 });
 
 const Layout1 = ({ classes, settings, children }) => {
@@ -206,7 +206,7 @@ const Layout1 = ({ classes, settings, children }) => {
 
 function mapStateToProps({ fuse }) {
   return {
-    settings: fuse.settings.current
+    settings: fuse.settings.current,
   };
 }
 

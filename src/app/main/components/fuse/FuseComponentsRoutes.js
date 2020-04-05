@@ -1,3 +1,4 @@
+import React from "react";
 export const FuseComponentsRoutes = [
   {
     path: "/components/fuse/fuse-theme",
