@@ -1,26 +1,20 @@
 import React, { Component } from "react";
-import QRCode from "qrcode.react";
 import {
-  ButtonGroup,
   Card,
   CardContent,
   Grow,
-  FormControlLabel,
-  Grid,
-  RadioGroup,
-  Radio,
-  TextField,
-  Typography,
   withStyles,
-  Button,
+  Stepper,
+  Step,
+  StepLabel,
 } from "@material-ui/core";
 import PropTypes from "prop-types";
 import _ from "lodash";
-import { darken } from "@material-ui/core/styles/colorManipulator";
 import classNames from "classnames";
 
-import BackButton from "app/main/components/first-party/inputs/buttons/BackButton";
-// import LocaleContext from "Context/LocaleContext";
+import AmountFormStep from "./page-parts/AmountFormStep";
+import PersonFormStep from "./page-parts/PersonFormStep";
+import CardFormStep from "./page-parts/CardFormStep";
 
 //import Restful from "util/io/Restful"
 
@@ -34,162 +28,79 @@ const styles = (theme) => ({
       " 80%)",
     color: theme.palette.primary.contrastText,
   },
-  hundo: { height: "100%", width: "100%" },
-  qrcode: { display: "block", margin: "auto" },
-  radio: { display: "grid", width: "300px", margin: "auto" },
+  paperHolder: { marginTop: "24px", width: "500px" },
 });
 
-const STEP = {
-  SETUP: 1,
-  FORM: 2,
-  PREVIEW: 3,
-  DONE: 4,
+export const STEP = {
+  SETUP: { index: 1, label: "Amount" },
+  PERSON_FORM: { index: 2, label: "Details" },
+  CARD_FORM: { index: 3, label: "Payment" },
+  PREVIEW: { index: 4, label: "Preview" },
+  DONE: { index: 5, label: "Completion" },
 };
 
 class DonatePage extends Component {
   constructor(props) {
     super(props);
     this._tag = this.constructor.name;
-    this.canSubmit = this.canSubmit.bind(this);
     this.renderStepSetup = this.renderStepSetup.bind(this);
+    this.renderStepCardForm = this.renderStepCardForm.bind(this);
+    this.renderStepPersonForm = this.renderStepPersonForm.bind(this);
     this.state = {
-      valueIndex: 0,
-      value: null,
-      customValue: 125,
       step: STEP.SETUP,
+      amount: null,
+      creditCard: null,
+      personal: null,
     };
   }
 
-  canSubmit = () => {
-    if (this.state.valueIndex < 0 || this.state.value < 0) {
-      return false;
-    }
-    return true;
-  };
-
-  renderRadiobar(radio) {
-    let { rangeGroups, unit, maxCurrency } = {
-      rangeGroups: [1, 10, 25, 50],
-      unit: "$",
-      maxCurrency: 2000,
-    };
-    //  language.getCurrency();
-    // <LocaleContext.Consumer>
-    // {language => {
-
+  renderStepSetup() {
     return (
-      <RadioGroup
-        className={radio}
-        value={this.state.value}
-        onClick={(e) => {
-          this.setState({ value: e.target.value });
+      <AmountFormStep
+        onBack={() => {}}
+        onSubmit={(amount) => {
+          this.setState({ step: STEP.PERSON_FORM, amount });
         }}
-      >
-        {_.map(rangeGroups[0], (value, index) => (
-          <FormControlLabel
-            value={value}
-            name={unit + "" + value}
-            label={unit + "" + value}
-            key={index}
-            control={<Radio />}
-          />
-        ))}
-        {/* <FormattedMessage id={"common.money.custom"}>
-                {locale => (
-                  <FormattedMessage id={"common.money.invalid"}>
-                    {locale2 => ( */}
-        <FormControlLabel
-          value={this.state.customValue}
-          name={unit + "" + this.state.customValue}
-          label={unit + "" + this.state.customValue}
-          key="custom"
-          control={
-            <Radio>
-              <TextField
-                label="Custom Amount"
-                helperText="Invalid Amount"
-                value={this.state.customValue}
-                error={
-                  this.state.customValue > maxCurrency ||
-                  this.state.customValue < 0
-                }
-                type="number"
-                onChange={(e) =>
-                  this.setState({
-                    valueIndex: 6,
-                    value: e.target.value,
-                    customValue: e.target.value,
-                  })
-                }
-              />
-            </Radio>
-          }
-        />
-        {/* )}
-                  </FormattedMessage>
-                )}
-              </FormattedMessage> */}
-      </RadioGroup>
+      />
     );
-    // }}
-    // </LocaleContext.Consumer>
-    // );
   }
 
-  renderPadding(hundo) {
-    return <Grid item xs={3} className={hundo}></Grid>;
-  }
-
-  renderStepSetup({ hundo, qrcode, radio }) {
+  renderStepPersonForm() {
     return (
-      <React.Fragment>
-        {this.renderPadding(hundo)}
-        <Grid container item xs className={hundo} direction="column">
-          <Grid item xs={1} />
-          <BackButton />
-          <Grid item xs className={hundo}>
-            <Typography>
-              {/* <FormattedMessage id={"Pages.Donation.Header"} /> */}
-              Donate Header Information
-            </Typography>
-            <QRCode
-              className={qrcode}
-              size={300}
-              value={
-                this.props.qrLocation +
-                "_" +
-                this.state.value +
-                "_" +
-                this.state.valueIndex
-              }
-            />
-            <Typography>
-              {/* <FormattedMessage id={"Pages.Donation.Body"} /> */}
-              Donate Body Information
-            </Typography>
-            {this.renderRadiobar(radio)}
-            <ButtonGroup>
-              <Button
-                disabled={!this.canSubmit()}
-                onClick={() => {
-                  this.setState({ step: STEP.FORM });
-                }}
-              >
-                Next
-              </Button>
-            </ButtonGroup>
-          </Grid>
-        </Grid>
-        {this.renderPadding(hundo)}
-      </React.Fragment>
+      <PersonFormStep
+        onSubmit={(personal) => {
+          this.setState({ step: STEP.CARD_FORM, personal });
+        }}
+        onBack={() => this.setState({ step: STEP.SETUP })}
+      />
     );
   }
 
-  renderStepForm(classes) {
-    return;
+  renderStepCardForm() {
+    return (
+      <CardFormStep
+        onSubmit={(creditCard) => {
+          this.setState({ step: STEP.PREVIEW, creditCard });
+        }}
+        onBack={() => this.setState({ step: STEP.PERSON_FORM })}
+      />
+    );
   }
-  renderStepPreview(classes) {}
-  renderStepDone(classes) {}
+
+  renderStepPreview() {}
+  renderStepDone() {}
+
+  renderStepper() {
+    return (
+      <Stepper activeStep={this.state.step.index - 1} alternativeLabel>
+        {_.map(STEP, ({ index, label }) => (
+          <Step key={label}>
+            <StepLabel>{label}</StepLabel>
+          </Step>
+        ))}
+      </Stepper>
+    );
+  }
 
   render() {
     let { classes } = this.props;
@@ -198,8 +109,11 @@ class DonatePage extends Component {
       case STEP.SETUP:
         renderStep = this.renderStepSetup;
         break;
-      case STEP.FORM:
-        renderStep = this.renderStepForm;
+      case STEP.PERSON_FORM:
+        renderStep = this.renderStepPersonForm;
+        break;
+      case STEP.CARD_FORM:
+        renderStep = this.renderStepCardForm;
         break;
       case STEP.PREVIEW:
         renderStep = this.renderStepPreview;
@@ -219,10 +133,11 @@ class DonatePage extends Component {
         )}
       >
         <div className="flex flex-col items-center justify-center w-full">
+          {this.renderStepper()}
           <Grow in={true}>
-            <Card className="w-full max-w-384">
+            <Card className={"w-full " + classes.paperHolder}>
               <CardContent className="flex flex-col items-center justify-center text-center p-48">
-                {renderStep(classes)}
+                {renderStep()}
               </CardContent>
             </Card>
           </Grow>

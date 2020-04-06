@@ -1,6 +1,7 @@
 import axios from "axios";
 import { getUserData } from "app/main/apps/contacts/store/actions/user.actions";
 import { Catalog } from "electr-common";
+const Chat = Catalog.Categories.Chat;
 const Contact = Catalog.Categories.Contact;
 
 export const GET_CONTACTS = "[CONTACTS APP] GET CONTACTS";
@@ -25,16 +26,16 @@ export const TOGGLE_STARRED_CONTACTS = "[CONTACTS APP] TOGGLE STARRED CONTACTS";
 export const SET_CONTACTS_STARRED = "[CONTACTS APP] SET CONTACTS STARRED ";
 
 export function getContacts(routeParams) {
-  const request = axios.get(Contact.GET_CONTACTS, {
-    params: routeParams
+  const request = axios.get(Chat.GET_CONTACTS, {
+    params: routeParams,
   });
 
-  return dispatch =>
-    request.then(response =>
+  return (dispatch) =>
+    request.then((response) =>
       dispatch({
         type: GET_CONTACTS,
         payload: response.data,
-        routeParams
+        routeParams,
       })
     );
 }
@@ -42,51 +43,51 @@ export function getContacts(routeParams) {
 export function setSearchText(event) {
   return {
     type: SET_SEARCH_TEXT,
-    searchText: event.target.value
+    searchText: event.target.value,
   };
 }
 
 export function toggleInSelectedContacts(contactId) {
   return {
     type: TOGGLE_IN_SELECTED_CONTACTS,
-    contactId
+    contactId,
   };
 }
 
 export function selectAllContacts() {
   return {
-    type: SELECT_ALL_CONTACTS
+    type: SELECT_ALL_CONTACTS,
   };
 }
 
 export function deSelectAllContacts() {
   return {
-    type: DESELECT_ALL_CONTACTS
+    type: DESELECT_ALL_CONTACTS,
   };
 }
 
 export function openNewContactDialog() {
   return {
-    type: OPEN_NEW_CONTACT_DIALOG
+    type: OPEN_NEW_CONTACT_DIALOG,
   };
 }
 
 export function closeNewContactDialog() {
   return {
-    type: CLOSE_NEW_CONTACT_DIALOG
+    type: CLOSE_NEW_CONTACT_DIALOG,
   };
 }
 
 export function openEditContactDialog(data) {
   return {
     type: OPEN_EDIT_CONTACT_DIALOG,
-    data
+    data,
   };
 }
 
 export function closeEditContactDialog() {
   return {
-    type: CLOSE_EDIT_CONTACT_DIALOG
+    type: CLOSE_EDIT_CONTACT_DIALOG,
   };
 }
 
@@ -95,14 +96,14 @@ export function addContact(newContact) {
     const { routeParams } = getState().contactsApp.contacts;
 
     const request = axios.post(Contact.POST_ADD_CONTACT, {
-      newContact
+      newContact,
     });
 
-    return request.then(response =>
+    return request.then((response) =>
       Promise.all([
         dispatch({
-          type: ADD_CONTACT
-        })
+          type: ADD_CONTACT,
+        }),
       ]).then(() => dispatch(getContacts(routeParams)))
     );
   };
@@ -113,14 +114,14 @@ export function updateContact(contact) {
     const { routeParams } = getState().contactsApp.contacts;
 
     const request = axios.post(Contact.POST_UPDATE_CONTACT, {
-      contact
+      contact,
     });
 
-    return request.then(response =>
+    return request.then((response) =>
       Promise.all([
         dispatch({
-          type: UPDATE_CONTACT
-        })
+          type: UPDATE_CONTACT,
+        }),
       ]).then(() => dispatch(getContacts(routeParams)))
     );
   };
@@ -131,14 +132,14 @@ export function removeContact(contactId) {
     const { routeParams } = getState().contactsApp.contacts;
 
     const request = axios.post(Contact.POST_REMOVE_CONTACT, {
-      contactId
+      contactId,
     });
 
-    return request.then(response =>
+    return request.then((response) =>
       Promise.all([
         dispatch({
-          type: REMOVE_CONTACT
-        })
+          type: REMOVE_CONTACT,
+        }),
       ]).then(() => dispatch(getContacts(routeParams)))
     );
   };
@@ -149,17 +150,17 @@ export function removeContacts(contactIds) {
     const { routeParams } = getState().contactsApp.contacts;
 
     const request = axios.post(Contact.POST_REMOVE_CONTACTS, {
-      contactIds
+      contactIds,
     });
 
-    return request.then(response =>
+    return request.then((response) =>
       Promise.all([
         dispatch({
-          type: REMOVE_CONTACTS
+          type: REMOVE_CONTACTS,
         }),
         dispatch({
-          type: DESELECT_ALL_CONTACTS
-        })
+          type: DESELECT_ALL_CONTACTS,
+        }),
       ]).then(() => dispatch(getContacts(routeParams)))
     );
   };
@@ -170,15 +171,15 @@ export function toggleStarredContact(contactId) {
     const { routeParams } = getState().contactsApp.contacts;
 
     const request = axios.post(Contact.POST_TOGGLE_STARRED_CONTACT, {
-      contactId
+      contactId,
     });
 
-    return request.then(response =>
+    return request.then((response) =>
       Promise.all([
         dispatch({
-          type: TOGGLE_STARRED_CONTACT
+          type: TOGGLE_STARRED_CONTACT,
         }),
-        dispatch(getUserData())
+        dispatch(getUserData()),
       ]).then(() => dispatch(getContacts(routeParams)))
     );
   };
@@ -189,18 +190,18 @@ export function toggleStarredContacts(contactIds) {
     const { routeParams } = getState().contactsApp.contacts;
 
     const request = axios.post(Contact.POST_TOGGLE_STARRED_CONTACTS, {
-      contactIds
+      contactIds,
     });
 
-    return request.then(response =>
+    return request.then((response) =>
       Promise.all([
         dispatch({
-          type: TOGGLE_STARRED_CONTACTS
+          type: TOGGLE_STARRED_CONTACTS,
         }),
         dispatch({
-          type: DESELECT_ALL_CONTACTS
+          type: DESELECT_ALL_CONTACTS,
         }),
-        dispatch(getUserData())
+        dispatch(getUserData()),
       ]).then(() => dispatch(getContacts(routeParams)))
     );
   };
@@ -211,18 +212,18 @@ export function setContactsStarred(contactIds) {
     const { routeParams } = getState().contactsApp.contacts;
 
     const request = axios.post(Contact.POST_SET_CONTACTS_STARRED, {
-      contactIds
+      contactIds,
     });
 
-    return request.then(response =>
+    return request.then((response) =>
       Promise.all([
         dispatch({
-          type: SET_CONTACTS_STARRED
+          type: SET_CONTACTS_STARRED,
         }),
         dispatch({
-          type: DESELECT_ALL_CONTACTS
+          type: DESELECT_ALL_CONTACTS,
         }),
-        dispatch(getUserData())
+        dispatch(getUserData()),
       ]).then(() => dispatch(getContacts(routeParams)))
     );
   };
@@ -233,18 +234,18 @@ export function setContactsUnstarred(contactIds) {
     const { routeParams } = getState().contactsApp.contacts;
 
     const request = axios.post(Contact.POST_SET_CONTACTS_UNSTARRED, {
-      contactIds
+      contactIds,
     });
 
-    return request.then(response =>
+    return request.then((response) =>
       Promise.all([
         dispatch({
-          type: SET_CONTACTS_STARRED
+          type: SET_CONTACTS_STARRED,
         }),
         dispatch({
-          type: DESELECT_ALL_CONTACTS
+          type: DESELECT_ALL_CONTACTS,
         }),
-        dispatch(getUserData())
+        dispatch(getUserData()),
       ]).then(() => dispatch(getContacts(routeParams)))
     );
   };

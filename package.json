@@ -43,6 +43,7 @@
     "react-big-calendar": "0.21.0",
     "react-chartjs-2": "2.7.6",
     "react-credit-card": "^0.20.0",
+    "react-credit-cards": "^0.8.0",
     "react-dom": "16.8.6",
     "react-draggable": "3.3.0",
     "react-frame-component": "4.1.0",

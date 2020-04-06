@@ -8656,7 +8656,7 @@ path-type@^4.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
-payment@^2.1.0:
+payment@^2.1.0, payment@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/payment/-/payment-2.3.0.tgz#b2a95e9c3052459647da3926b8b66c553d93098f"
   integrity sha1-sqlenDBSRZZH2jkmuLZsVT2TCY8=
@@ -9886,6 +9886,13 @@ react-credit-card@^0.20.0:
   integrity sha1-sGOl9AefQcC9L+o2b2BurtfsanI=
   dependencies:
     payment "^2.1.0"
+
+react-credit-cards@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/react-credit-cards/-/react-credit-cards-0.8.0.tgz#5a568d01cb440275adf2d4cda29c0fb1bf97248a"
+  integrity sha512-OTI08Dz1qEefxHOKJQSUa5nn8awuN5rAE8lRz2XS3BG3SIa5vmaAJLAhdmikc75qEoIkrYST79Z8oGUPVkBNsA==
+  dependencies:
+    payment "^2.3.0"
 
 react-dev-utils@^9.0.1:
   version "9.1.0"
